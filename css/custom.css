@@ -7,7 +7,6 @@ body{
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: ;
     background-image: url('../images/backgroundwae.png');
     background-size: cover;
     background-position: 50% 50%;
@@ -42,6 +41,11 @@ body{
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+.sidenav a img {
+    border: 0px;
+    width: 200px;
 }
 
 .sidenav {
@@ -125,6 +129,10 @@ body{
 	animation: float 6s ease-in-out infinite;
 	max-width: 100%; 
     height: auto;
+}
+
+.logo>a {
+    width: 100%;
 }
 
 .cont-about img{
