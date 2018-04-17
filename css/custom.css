@@ -1,3 +1,7 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
 body{
     background-color: #222;
 }
@@ -7,7 +11,6 @@ body{
     z-index: -1;
     width: 100%;
     height: 100%;
-    background-color: ;
     background-image: url('../images/backgroundwae.png');
     background-size: cover;
     background-position: 50% 50%;
@@ -20,6 +23,7 @@ body{
     padding: 45px 35px;
     -webkit-animation: fadeEffect 1s;
     animation: fadeEffect 1s;
+    padding-bottom: 240px;
 }
 
 @-webkit-keyframes fadeEffect {
@@ -42,6 +46,11 @@ body{
 	100% {
 		transform: translatey(0px);
 	}
+}
+
+.sidenav a img {
+    border: 0px;
+    width: 200px;
 }
 
 .sidenav {
@@ -81,6 +90,9 @@ body{
 #main {
     transition: margin-left .5s;
     padding:0px;
+    position: relative;
+    min-height: 100%;
+
 }
 
 @media screen and (max-height: 450px) {
@@ -116,18 +128,31 @@ body{
     background-color: #ffffff;
 }
 
-.cont-about{
-    padding:50px;
-}
+
 
 .logo{
 	transform: translatey(0px);
 	animation: float 6s ease-in-out infinite;
-	max-width: 100%; 
+	max-width: 100%;
     height: auto;
+    text-align: center;
+}
+
+.logo a , .banner {
+    width: 100%;
+}
+
+.cont-about{
+    padding:50px 0px;
 }
 
 .cont-about img{
+    height: auto;
+    max-width: 100%;
+}
+
+.about-text {
+    padding: 0px 20px;
 }
 
 .info{
@@ -157,6 +182,8 @@ body{
     text-align: center;
     padding: 15px 0px;
     color: #ffffff;
+    margin:auto;
+
 }
 
 .navbar-left i{
@@ -180,12 +207,11 @@ nav a:hover{
 
 .cont-footer{
     width: 100%;
-    height: 100%;
-    position: relative;
+    position: absolute;
     bottom: 0px;
 }
 .footer{
-    padding: 10px 0;
+    padding: 10px 30px;
     color:#3d3d3d;
     text-align: center;
 }
@@ -206,7 +232,11 @@ nav a:hover{
     transition: all .3s;
 }
 
-
+#openbutton span {
+    color:#818181;
+    font-size:30px;
+    cursor:pointer;
+}
 
 
 
