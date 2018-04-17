@@ -5,8 +5,18 @@ $('img').on('dragstart', false);
 const contentEl = $('#content'); //main content element
 const availableSites = ["yllapito","etusivu","killat"]
 
-//Scripts for le tabcontents
 
+function init() {
+    let hash = location.hash.slice(1);
+
+    if (availableSites.includes(hash)){
+        openTab('', hash)
+    } else {
+        openTab('', 'etusivu');
+    }
+}
+
+//Scripts for le tabcontents
 function toggleDrawer(){
     let sideNav = document.getElementById("mySidenav")
     let mainEl = document.getElementById("main")
@@ -33,6 +43,9 @@ function toggleDrawer(){
     buttonIcon.classList.toggle("fa-arrow-circle-right");
     buttonIcon.classList.toggle("fa-arrow-circle-left");
 }
+function onHashChange() {
+    openTab("evt", location.hash.slice(1))
+}
 
 function openTab(evt, tabName) {
     let tabcontent, tablinks;
@@ -45,6 +58,7 @@ function openTab(evt, tabName) {
             contentEl.html(data);
         }, 'html')
         .done(function () {
+            window.location = '#'+tabName;
             contentEl.show();
         })
     }
