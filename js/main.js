@@ -1,9 +1,13 @@
-
 $('img').on('dragstart', false);
 
 // init some basic stuff
 const contentEl = $('#content'); //main content element
 const availableSites = ["yllapito","etusivu","killat"]
+let currentTab = "";
+
+particlesJS.load('particles-js', './js/particles.json', function () {
+    console.log('callback - particles.js config loaded');
+});
 
 
 function init() {
@@ -51,7 +55,7 @@ function openTab(evt, tabName) {
     let tabcontent, tablinks;
     
 
-    if ( availableSites.includes(tabName) ){
+    if ( availableSites.includes(tabName) && currentTab !== tabName ){
         contentEl.hide();
         
         $.get('tabs/'+tabName+'.html', function(data){ 
