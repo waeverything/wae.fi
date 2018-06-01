@@ -1,4 +1,4 @@
 # WaeWebsite
 waewebsite (duh)
 
--[sivuosote](https://jusqu.github.io/WaeWebsite/)
+-[sivuosote](https://h4192.github.io/WaeWebsite/)

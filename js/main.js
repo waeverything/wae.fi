@@ -2,7 +2,7 @@ $('img').on('dragstart', false);
 
 // init some basic stuff
 const contentEl = $('#content'); //main content element
-const availableSites = ["yllapito","etusivu","killat"]
+const availableSites = ["yllapito","etusivu","killat","serverit","minecraft"]
 let currentTab = "";
 
 particlesJS.load('particles-js', './js/particles.json', function () {
