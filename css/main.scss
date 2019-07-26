@@ -1,6 +1,7 @@
 //Variable
 $color-white: #f2f2f2;
 $color-dark: #222;
+$color-blue: #04c2ff;
 
 //Base styles
 body {
@@ -147,7 +148,7 @@ ul {
 .about {
   margin-top: 26vw;
   box-shadow: -5rem 0 3rem rgba(0,0,0,.75);
-  border-top: solid #04c2ff 0.5rem;
+  border-top: solid $color-blue 0.5rem;
 }
 
 //Social section
@@ -165,10 +166,16 @@ ul {
     margin: 2rem;
     display: flex;
     flex-direction: column;
+    font-family: 'Russo One', sans-serif;
+
+    &:hover img {
+      transform: scale(1.1);
+    }
   }
 
   img {
     height: 5rem;
+    transition: all .1s ease;
   }
 }
 
