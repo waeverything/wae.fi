@@ -193,7 +193,7 @@ ul {
 
 .member-wrapper {
   display: grid;
-  grid-template-columns: repeat( auto-fit, minmax(10rem, 1fr) );
+  grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr) );
   grid-gap: 1rem;
   width: 100%;
   padding-bottom: 5rem;
@@ -202,8 +202,8 @@ ul {
 .member-item {
   img {
     border-radius: 50%;
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
   }
 }
 
