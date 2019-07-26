@@ -1,101 +1,195 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>WAEverything</title>
+  <meta charset="utf-8">
+  <title>WAEverything</title>
 
-    <link rel="shortcut icon" href="images/wae1.png" />
-    <link rel="bookmark icon" href="images/wae1.png" />
-    <meta name="author" content="Jusqu, Worreh" />
-    <meta name="description" content="WAEverything" />
-    <meta name="keywords" content="WAE, WAEverything, J0P, Wae discord" />
-    <meta name="robots" content="all" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#cccccc">
+  <meta name="theme-color" content="#222">
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/main.min.css" rel="stylesheet">
 </head>
 
-<body onload="init()" onhashchange="onHashChange()">
+<body>
+  <div id="banner" class="banner">
+    <div class="content">
+      <img alt="WAE logo" class="banner-logo" src="svg/wae.svg" />
+      <div class="typewriter">
+        <h1>We Accidentally Everything</h1>
+      </div>
+    </div>
+  </div>
 
-    <div id="mySidenav" class="sidenav" data-drawer="closed">
+  <div class="section about">
+    <h1>Ketä?</h1>
+    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
 
-        <a class="tablinks" onclick="openTab(event, 'etusivu')">
-            <img alt="Etusivu" src="images/etusivu_button.png" style="cursor:pointer">
-        </a>
-        <a class="tablinks" onclick="openTab(event, 'killat')">
-            <img alt="Killat" src="images/guilds_button.png" style="cursor:pointer">
-        </a>
-        <a class="tablinks" onclick="openTab(event, 'yllapito')">
-            <img alt="Ylläpito" src="images/yllapito_button.png" style="cursor:pointer">
-        </a>
-        <a href="javascript:alert('Tää sivu on keske ku ei jaksa.avi')">
-            <img  alt="Serverit" src="images/serverit_button.png" style="cursor:pointer">
-        </a>
-        <a class="tablinks" style="cursor:pointer" href="/wae/waecraft">Minecraft</a>
+  <!-- Social Media -->
+  <div class="section social">
+    <h1>Sosiaalinen media</h1>
+    <p class="lead">Seuraa meitä somessa! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <div class="social-icons">
+      <a href="https://youtube.com/WAEverything">
+        <img alt="Youtube logo" src="../svg/fontawesome/youtube-brands.svg">
+        Youtube
+      </a>
+      <a href="http://twitch.tv/waeverything">
+        <img alt="Twitch logo" src="../svg/fontawesome/twitch-brands.svg">
+        Twitch
+      </a>
+      <a href="https://discord.gg/wae">
+        <img alt="Discord logo" src="../svg/fontawesome/discord-brands.svg">
+        Discord
+      </a>
+      <a href="https://twitter.com/WAEverything">
+        <img alt="Twitter logo" src="../svg/fontawesome/twitter-brands.svg">
+        Twitter
+      </a>
+    </div>
+  </div>
 
-        <a href="https://discord.gg/wae">
-            <img src="images/discordlogo_blue.png">
-        </a>
+  <div class="section members">
+    <h1>Jäsenet</h1>
+    <div class="member-category">
+      <div class="line"></div>
+      <h2>Ai te ootte täälläkin</h2>
+      <div class="line"></div>
+    </div>
+    <div class="member-wrapper">
+      <div class="member-item">
+        <img src="img/members/emmi.jpg">
+        <h2>Emmi</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/j0p.jpg">
+        <h3>J0P</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/joona.jpg">
+        <h3>Joona</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/nipde.jpg">
+        <h3>Nipde</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/worreh.jpg">
+        <h3>Worreh</h3>
+      </div>
     </div>
 
-    <div id="particles-js"></div>
-
-    <div id="main">
-
-        <div id="openbutton" onclick="toggleDrawer()">
-            <span>
-                <i class="fas fa-arrow-circle-right buttonIcon"></i>
-            </span>
-        </div>
-
-        <div id="content" class="tabcontent">
-
-        </div>
-
-        <div class="cont-footer">
-            <div class="">
-                <div class="footer">
-                    <a href="http://youtube.com/WAEverything">
-                        <i class="fa fa-youtube"></i>
-                    </a>
-                    <a href="http://twitch.tv/waeverything">
-                        <i class="fa fa-twitch"></i>
-                    </a>
-                    <a href="https://discord.gg/wae">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="http://twitter.com/WAEverything">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <p>© 2018 WAEverything</p>
-                </div>
-            </div>
-        </div>
-
+    <div class="member-category">
+      <div class="line"></div>
+      <h2>Ne muut, ne puut</h2>
+      <div class="line"></div>
     </div>
+    <div class="member-wrapper">
+      <div class="member-item">
+        <img src="img/members/donttu.jpg">
+        <h3>Donttu</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/corro.jpg">
+        <h3>Corrosive</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/eetu.jpg">
+        <h3>Eetu</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/fabian.jpg">
+        <h3>Fabian</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/j3rmu.jpg">
+        <h3>J3-RMU</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/jipsu.jpg">
+        <h3>Jipsu</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/juizzi.jpg">
+        <h3>Juizzi</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/jusqu.jpg">
+        <h3>Jusqu</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/mosku.jpg">
+        <h3>Mosku</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/nooruli.jpg">
+        <h3>Nooruli</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/peku.jpg">
+        <h3>Peku</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/piia.jpg">
+        <h3>Piini524</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/retro.jpg">
+        <h3>Retroritari</h3>
+      </div>
+      <div class="member-item">
+        <img src="img/members/zippa.jpg">
+        <h3>Zippa</h3>
+      </div>
+    </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <div class="section three-info">
+    <div class="wrapper">
+      <div></div>
+      <div>
+        <img src="svg/fontawesome/server-solid.svg">
+        <h2>Peliserverimme</h2>
+        <ul>
+          <li>Garry's Mod</li>
+          <li>Minecraft</li>
+          <li>Space Engineers</li>
+          <li>Starbound</li>
+        </ul>
+      </div>
+      <div></div>
+    </div>
+  </div>
 
-    <script defer src="js/font-awesome/5.0.4/js/fontawesome-all.min.js"></script>
-    <script defer src="js/font-awesome/5.0.4/js/fa-v4-shims.js"></script>
+  <div class="section footer">
+    <p>Icons provided by <a href="https://fontawesome.com/license">FontAwesome</a></p>
+    <p>Copyright &copy 2019 — Fabian Adrian</p>
+  </div>
 
-    <script src="js/particles.js"></script>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+
+  <div class="discord-widget">
+    <img class="server-icon" src="img/server-ico.png" alt="Discord server icon." />
+    <div>
+      <h5>WAEverything</h5>
+      <h6>discord.gg/WAE</h6>
+    </div>
+    <a href="https://discord.gg/wae" class="btn">Liity</a>
+    <p class="online" id="onlineCounter">Online<span class="spacer">-</span><span class="count" id="memberCount"></span></p>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
+
+  <script src="js/background.js"></script>
+  <script src="js/discord-widget.js"></script>
 </body>
 
 </html>
