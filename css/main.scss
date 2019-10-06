@@ -302,17 +302,23 @@ ul {
   opacity: 0;
   transition: all 1s;
 
+  p {
+    padding-bottom: .5rem;
+  }
+
   p::after,
   p::before {
     content: '\22';
     color: #aaa;
   }
 
-  .member-socials {}
+  .member-socials {
+    border-top: solid rgba(255,255,255,.15) 1px;
+  }
 
   img {
-    height: 3rem;
-    width: 3rem;
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
 
