@@ -145,19 +145,7 @@ ul {
     overflow: hidden;
     white-space: nowrap;
     margin: 0 auto;
-    animation: typing 2s steps(22) 2s forwards;
     text-shadow: 0 0 0.1em #000;
-    width: 0;
-  }
-}
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
   }
 }
 /* Background scroll */
