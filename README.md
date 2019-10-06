@@ -1,4 +1,4 @@
-# WaeWebsite
-waewebsite (duh)
+#WAE Official Website
+##(Work in progress)
 
--[sivuosote](https://waeverything.github.io/WaeWebsite/)
+-[View the page here](https://waeverything.github.io/WaeWebsite/)
