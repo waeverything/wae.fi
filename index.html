@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fi" dir="ltr">
 
 <head>
   <meta charset="utf-8">
   <title>WAEverything</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -27,37 +29,44 @@
   </div>
 
   <div class="section about">
-    <h1>Ketä?</h1>
-    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <h1>Mikä on WAE?</h1>
+    <p class="lead">We Accidentally Everything on <span>ryhmä töhöjä</span> peliporukka. Oli kai meillä joku Discord serverikin jos oikein muistan.</p>
   </div>
 
   <!-- Social Media -->
   <div class="section social">
     <h1>Sosiaalinen media</h1>
-    <p class="lead">Seuraa meitä somessa! Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     <div class="social-icons">
-      <a href="https://youtube.com/WAEverything">
-        <img alt="Youtube logo" src="./svg/fontawesome/youtube-brands.svg">
-        Youtube
+      <a href="https://youtube.com/WAEverything" target="_blank">
+        <div class="hover-1"><img src="svg/hover-circle.svg"></div>
+        <div class="hover-2"><img src="svg/hover-circle.svg"></div>
+        <img alt="Youtube logo" src="svg/fontawesome/youtube-brands.svg">
+        <div class="text">Youtube</div>
       </a>
-      <a href="http://twitch.tv/waeverything">
-        <img alt="Twitch logo" src="./svg/fontawesome/twitch-brands.svg">
-        Twitch
+      <a href="http://twitch.tv/waeverything" target="_blank">
+        <div class="hover-1"><img src="svg/hover-circle.svg"></div>
+        <div class="hover-2"><img src="svg/hover-circle.svg"></div>
+        <img alt="Twitch logo" src="svg/fontawesome/twitch-brands.svg">
+        <div class="text">Twitch</div>
       </a>
-      <a href="https://discord.gg/wae">
-        <img alt="Discord logo" src="./svg/fontawesome/discord-brands.svg">
-        Discord
+      <a href="https://discord.gg/wae" target="_blank">
+        <div class="hover-1"><img src="svg/hover-circle.svg"></div>
+        <div class="hover-2"><img src="svg/hover-circle.svg"></div>
+        <img alt="Discord logo" src="svg/fontawesome/discord-brands.svg">
+        <div class="text">Discord</div>
       </a>
-      <a href="https://twitter.com/WAEverything">
-        <img alt="Twitter logo" src="./svg/fontawesome/twitter-brands.svg">
-        Twitter
+      <a href="https://twitter.com/WAEverything" target="_blank">
+        <div class="hover-1"><img src="svg/hover-circle.svg"></div>
+        <div class="hover-2"><img src="svg/hover-circle.svg"></div>
+        <img alt="Twitter logo" src="svg/fontawesome/twitter-brands.svg">
+        <div class="text">Twitter</div>
       </a>
     </div>
   </div>
 
   <div class="section members">
     <h1>Jäsenet</h1>
+    <p class="lead">Peliporukkamme jäsenet ja holisti-roolit.</p>
     <div class="member-category">
       <div class="line"></div>
       <h2>Perustajat</h2>
@@ -71,6 +80,15 @@
       <div class="member-item">
         <img src="img/members/j0p.jpg">
         <h3>J0P</h3>
+        <p class="member-holisti">(Kahviholisti)</p>
+        <div class="member-tooltip">
+          <p>Olen se tyyppi Kivijärveltä ja teen videoita monista erilaisista peleistä!</p>
+          <div class="member-socials">
+            <a>
+              <img src="svg/fontawesome/youtube-brands-light.svg">
+            </a>
+          </div>
+        </div>
       </div>
       <div class="member-item">
         <img src="img/members/joona.jpg">
@@ -79,6 +97,7 @@
       <div class="member-item">
         <img src="img/members/nipde.jpg">
         <h3>Nipde</h3>
+        <p class="member-holisti">(Absoholisti)</p>
       </div>
       <div class="member-item">
         <img src="img/members/worreh.jpg">
@@ -106,11 +125,12 @@
       </div>
       <div class="member-item">
         <img src="img/members/fabian.jpg">
-        <h3>Fabian</h3>
+        <h3><a class="fab-special" href="https://www.youtube.com/watch?v=rJfwHQteIeo" target="_blank">F</a>abian</h3>
       </div>
       <div class="member-item">
         <img src="img/members/j3rmu.jpg">
         <h3>J3-RMU</h3>
+        <p class="member-holisti">(Alkoholisti)</p>
       </div>
       <div class="member-item">
         <img src="img/members/jipsu.jpg">
@@ -119,6 +139,7 @@
       <div class="member-item">
         <img src="img/members/juizzi.jpg">
         <h3>Juizzi</h3>
+        <p class="member-holisti">(Conkeholisti)</p>
       </div>
       <div class="member-item">
         <img src="img/members/jusqu.jpg">
@@ -168,7 +189,23 @@
     </div>
   </div>
 
-  <div class="section footer">
+  <div class="split-section holistit">
+    <div class="left"></div>
+    <div class="right">
+      <div class="content">
+        <h1>Holistit</h1>
+        <h2>Mikä on holisti?</h2>
+        <p>Hyvä kun kysyit! Holisti on rooli/status jonka saat tukemalla yhtä tai useampaa jäsentä.</p>
+        <h2>Holisti-edut</h2>
+        <p class="lead">Tarjoamme holisteille pääsyn moniin holisti-exclusive juttuihin kuten esimerkiksi:</p>
+        <ul>
+          <li>Pääsyn <a>peliservereillemme</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
     <p>Icons provided by <a href="https://fontawesome.com/license">FontAwesome</a></p>
     <p>Copyright &copy 2019 — Fabian Adrian</p>
   </div>
@@ -181,7 +218,7 @@
       <h5>WAEverything</h5>
       <h6>discord.gg/WAE</h6>
     </div>
-    <a href="https://discord.gg/wae" class="btn">Liity</a>
+    <a href="https://discord.gg/wae" target="_blank" class="btn">Liity</a>
     <p class="online" id="onlineCounter">Online<span class="spacer">-</span><span class="count" id="memberCount"></span></p>
   </div>
 
