@@ -86,15 +86,6 @@ ul {
   }
 }
 
-.split-section {
-  grid-template-columns: 2fr 5fr;
-  place-items: center;
-  grid-gap: 1rem;
-
-  > * {
-    width: 100%;
-  }
-}
 //Banner
 
 .banner {
@@ -322,21 +313,18 @@ ul {
   }
 }
 
-.three-info {
-  @include light-bg;
-
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-
-    img {
-      width: 6rem;
-    }
-  }
-}
-
 .holistit {
-  @include dark-bg;
+  background: #6953ac;
+  color: $color-white;
+
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  grid-gap: 1rem;
+
+  > * {
+    width: 100%;
+  }
+
   .left {
     background: $color-white url('../img/holisti-discord.jpg') left top / cover;
     height: 100%;
@@ -351,10 +339,17 @@ ul {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(to right, transparent 75%, $color-dark 100%);
+    background-image: linear-gradient(to right, transparent, #6953ac);
   }
+
   .content {
     padding: 5rem 1rem;
+  }
+
+  .right {
+    img {
+      width: 6rem;
+    }
   }
 }
 
@@ -483,7 +478,7 @@ ul {
   }
 }
 @media (min-width: 46rem) {
-  .split-section {
+  .holistit {
     display: grid;
   }
   .member-item:hover .member-tooltip {
