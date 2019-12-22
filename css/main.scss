@@ -22,11 +22,6 @@ body {
   transform-style: flat;
 }
 
-//Chrome tranform bug fix
-* {
-  -webkit-backface-visibility: hidden;
-}
-
 h1,
 h2,
 h3 {
