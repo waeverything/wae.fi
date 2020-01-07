@@ -8,19 +8,30 @@ let elem = document.getElementById("memberCount");
 
 document.onload = update();
 
-//Run script again every x seconds
-window.setInterval(function() {
-  update();
-}, interval);
-
 //Update member counter
 function update() {
   fetch(url)
     .then(res => res.json())
     .then((out) => {
-      elem.innerHTML = out.members.length;
+      elem.style.opacity = 0;
+      setTimeout(function() {
+        elem.innerHTML = "Online: " + out.members.length;
+        elem.style.opacity = 1;
+        setTimeout(function() {
+          elem.style.opacity = 0;
+          setTimeout(function() {
+            elem.innerHTML = "discord.gg/wae";
+            elem.style.opacity = 1;
+          }, 1500);
+        }, 15000);
+      }, 1500);
     })
     .catch(err => {
       throw err
     });
 };
+
+//Run script again every x seconds
+window.setInterval(function() {
+  update();
+}, interval);
