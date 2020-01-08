@@ -22,10 +22,10 @@ body {
   transform-style: flat;
 }
 
+.discord-widget,
 h1,
 h2,
-h3,
-.discord-widget {
+h3 {
   font-family: 'Russo One', sans-serif;
 }
 
@@ -86,9 +86,7 @@ ul {
     grid-column: 2;
   }
 }
-
 //Banner
-
 .banner {
   background: $color-dark url('../svg/background.svg') center / cover;
   align-items: center;
@@ -219,8 +217,8 @@ ul {
   }
 }
 
-.outer-ring,
-.inner-ring {
+.inner-ring,
+.outer-ring {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -243,6 +241,7 @@ ul {
   transition: all 0.5s ease;
 }
 //Member section
+
 .member-category {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -300,7 +299,7 @@ ul {
   transition: all 1s;
 
   p {
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
   }
 
   p::after,
@@ -319,10 +318,47 @@ ul {
   }
 }
 
+.videocontent {
+  @include light-bg;
+  grid-template-columns: 1fr 2fr;
+  place-items: center;
+  grid-gap: 1rem;
+  padding: 5rem 5%;
+
+  .content {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr minmax(auto, 60rem) 1fr;
+    padding-top: 1rem;
+  }
+
+  .content > * {
+    grid-column: 2;
+  }
+}
+
+.videoframe {
+  width: 100%;
+  padding-bottom: 56.25%;
+  position: relative;
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0 0 3rem rgba(0,0,0,.5);
+
+  iframe {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+}
+
 .holistit {
   background: #6953ac;
   color: $color-white;
-
   grid-template-columns: 1fr 1fr 1fr;
   place-items: center;
   grid-gap: 1rem;
@@ -348,13 +384,12 @@ ul {
     background-image: linear-gradient(to right, transparent, #6953ac);
   }
 
-  .content {
+  .content,
+  .right {
     padding: 5rem 1rem;
   }
 
   .right {
-    border-left: solid .3rem rgba(255,255,255,.15);
-
     img {
       width: 6rem;
     }
@@ -364,6 +399,10 @@ ul {
 .footer {
   @include dark-bg;
   padding: 3rem 1rem;
+
+  .grey {
+    color: #aaa;
+  }
 }
 //Discord Widget
 
@@ -486,8 +525,18 @@ ul {
   .holistit {
     display: grid;
   }
+
   .member-item:hover .member-tooltip {
     opacity: 1;
     top: -3rem;
+  }
+}
+@media (min-width: 60rem) {
+  .videocontent {
+    display: grid;
+
+    .content {
+      padding-top: 0;
+    }
   }
 }
