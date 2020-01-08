@@ -178,14 +178,16 @@ ul {
       transform: scale(1.2);
     }
 
-    &:hover .hover-1 img {
+    &:hover .outer-ring img {
       opacity: 0.2;
       transform: scale(3);
+      filter: drop-shadow($color-blue 0 0 .5rem);
     }
 
-    &:hover .hover-2 img {
+    &:hover .inner-ring img {
       opacity: 0.1;
       transform: scale(2);
+      filter: drop-shadow($color-blue 0 0 .5rem);
     }
 
     &:hover .text {
@@ -212,8 +214,8 @@ ul {
   }
 }
 
-.hover-1,
-.hover-2 {
+.outer-ring,
+.inner-ring {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -225,11 +227,14 @@ ul {
   img {
     width: 100%;
     opacity: 0;
-    transition: all 1s ease;
   }
 }
 
-.hover-2 img {
+.outer-ring img {
+  transition: all 1s ease;
+}
+
+.inner-ring img {
   transition: all 0.5s ease;
 }
 //Member section
@@ -360,17 +365,17 @@ ul {
 .discord-widget {
   background: #2C2F33;
   border-radius: 0.5rem;
+  box-shadow: 0 0 3rem rgba(0,0,0,.5);
   display: inline-grid;
   grid-gap: 1rem;
+  grid-template-columns: auto 1fr;
+  padding: 1rem;
   place-items: center;
   position: fixed;
   right: 2rem;
   top: 2rem;
-  z-index: 10;
-  padding: 1rem;
-  box-shadow: 0 0 3rem rgba(0,0,0,.5);
   width: 16rem;
-  grid-template-columns: auto 1fr;
+  z-index: 10;
 
   img {
     width: 2.5rem;
