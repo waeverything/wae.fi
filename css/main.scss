@@ -69,6 +69,11 @@ ul {
   font-size: 1.2rem;
 }
 
+.spacer {
+  height: 2rem;
+  width: 100%;
+}
+
 .section {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 72rem) 1fr;
@@ -373,7 +378,7 @@ ul {
   place-items: center;
   position: fixed;
   right: 2rem;
-  top: 2rem;
+  top: 1rem;
   width: 16rem;
   z-index: 10;
 
