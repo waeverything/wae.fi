@@ -241,17 +241,12 @@ ul {
 
   > img {
     animation: memberunhover .5s ease forwards;
-    transition: filter .2s;
+    transition: filter .4s;
   }
 
   &:hover > img {
     animation: memberhover .8s ease forwards;
     filter: brightness(.7);
-  }
-
-  &:hover h3 {
-    letter-spacing: .5rem;
-    padding-left: .5rem;
   }
 
   @keyframes memberhover {
@@ -260,17 +255,17 @@ ul {
     }
 
     30% {
-      transform: scale(.85);
+      transform: scale(.94);
     }
 
     100% {
-      transform: scale(.92);
+      transform: scale(.98);
     }
   }
 
   @keyframes memberunhover {
     from {
-      transform: scale(.92);
+      transform: scale(.98);
     }
     to {
       transform: scale(1);
@@ -279,7 +274,6 @@ ul {
 
   h3 {
     color: $color-white;
-    transition: all 1s;
     overflow: hidden;
 
     img {
