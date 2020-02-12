@@ -250,7 +250,8 @@ ul {
   }
 
   &:hover h3 {
-    transform: scale(1.2);
+    letter-spacing: .5rem;
+    padding-left: .5rem;
   }
 
   @keyframes memberhover {
@@ -278,10 +279,8 @@ ul {
 
   h3 {
     color: $color-white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    transition: transform .5s;
+    transition: all 1s;
+    overflow: hidden;
 
     img {
       width: .7rem;
