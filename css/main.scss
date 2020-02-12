@@ -79,7 +79,7 @@ ul {
   display: grid;
   grid-template-columns: 1fr minmax(auto, 72rem) 1fr;
   place-items: center;
-  padding: 5rem 0;
+  padding: 6rem 0;
   grid-gap: 1rem;
 
   > * {
@@ -88,6 +88,7 @@ ul {
   }
 }
 //Banner
+
 .banner {
   background: $color-dark url('../svg/background.svg') center / cover;
   align-items: center;
@@ -177,71 +178,28 @@ ul {
     flex-direction: column;
     font-family: 'Russo One', sans-serif;
     position: relative;
+    font-size: 1.1em;
+    transition: filter 1s ease;
 
     &:hover img {
       transform: scale(1.2);
     }
 
-    &:hover .outer-ring img {
-      opacity: 0.2;
-      transform: scale(3);
-      filter: drop-shadow($color-blue 0 0 .5rem);
-    }
-
-    &:hover .inner-ring img {
-      opacity: 0.1;
-      transform: scale(2);
-      filter: drop-shadow($color-blue 0 0 .5rem);
-    }
-
     &:hover .text {
       transform: translateY(0.5rem);
+      color: $color-dark;
     }
   }
 
   img {
     height: 5rem;
-    transition: all .05s ease;
+    transition: all 0.5s ease;
   }
 
   .text {
-    transition: all .05s ease;
+    transition: all 0.5s ease;
   }
 }
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.inner-ring,
-.outer-ring {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  display: grid;
-  place-items: center;
-
-  img {
-    width: 100%;
-    opacity: 0;
-  }
-}
-
-.outer-ring img {
-  transition: all 1s ease;
-}
-
-.inner-ring img {
-  transition: all 0.5s ease;
-}
-//Member section
 
 .member-category {
   display: grid;
@@ -273,11 +231,62 @@ ul {
 
 .member-item {
   position: relative;
-  padding: .5rem;
+  padding: 0.5rem;
+  color: $color-white;
 
-  img {
+  .member-icon {
     height: 7rem;
     border-radius: 50%;
+  }
+
+  > img {
+    animation: memberunhover .5s ease forwards;
+    transition: filter .2s;
+  }
+
+  &:hover > img {
+    animation: memberhover .8s ease forwards;
+    filter: brightness(.7);
+  }
+
+  &:hover h3 {
+    transform: scale(1.2);
+  }
+
+  @keyframes memberhover {
+    0% {
+      transform: scale(1);
+    }
+
+    30% {
+      transform: scale(.85);
+    }
+
+    100% {
+      transform: scale(.92);
+    }
+  }
+
+  @keyframes memberunhover {
+    from {
+      transform: scale(.92);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  h3 {
+    color: $color-white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: transform .5s;
+
+    img {
+      width: .7rem;
+      margin-left: .3em;
+    }
   }
 }
 
@@ -312,7 +321,7 @@ ul {
   width: 100%;
   padding-bottom: 56.25%;
   position: relative;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 0 0 3rem rgba(0,0,0,.5);
 
