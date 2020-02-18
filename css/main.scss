@@ -163,9 +163,9 @@ ul {
   position: sticky;
   margin-top: 26vw;
   top: 0;
-  border-top: solid $color-blue 0.5rem;
+  border-bottom: solid $color-blue 0.3rem;
   padding: 0 1rem;
-  box-shadow: 0 0 4rem rgba(0,0,0,.75);
+  box-shadow: 0 0 4rem rgba(0,0,0,.5);
   z-index: 1;
 
   .right {
@@ -179,7 +179,7 @@ ul {
       align-items: center;
 
       img {
-        height: 3rem;
+        height: 2.5rem;
         padding-left: 0.5rem;
       }
     }
@@ -199,7 +199,7 @@ ul {
   }
 
   img {
-    height: 80%;
+    height: 3rem;
   }
 }
 //About section
