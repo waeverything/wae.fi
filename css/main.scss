@@ -170,7 +170,7 @@ ul {
 
   .right {
     margin-left: auto;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: flex-end;
 
@@ -195,7 +195,7 @@ ul {
   }
 
   .links {
-    padding-left: 4rem;
+    padding-left: 2rem;
   }
 
   img {
@@ -270,7 +270,7 @@ ul {
 .member-wrapper {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   place-items: center;
   width: 100%;
   padding-bottom: 5rem;
@@ -355,7 +355,6 @@ ul {
   }
 
   .content {
-    display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -577,13 +576,16 @@ ul {
   .holistit {
     display: grid;
   }
-}
-@media (min-width: 60rem) {
-  .videocontent {
-    display: grid;
 
-    .content {
-      padding-top: 0;
-    }
+  .navbar .right {
+    display: flex;
+  }
+
+  .member-wrapper {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .servers .content {
+    display: grid;
   }
 }
