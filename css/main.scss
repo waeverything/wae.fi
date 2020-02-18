@@ -22,7 +22,7 @@ body {
   transform-style: flat;
 }
 
-.discord-widget,
+.discord-widget, .navbar,
 h1,
 h2,
 h3 {
@@ -58,6 +58,7 @@ h3 {
 a {
   text-decoration: none;
   color: #aaa;
+  transition: color 0.1s;
 }
 
 ul {
@@ -150,12 +151,60 @@ ul {
     transform: translateX(-550%);
   }
 }
+
+.navbar {
+  @include dark-bg;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 4rem;
+  position: sticky;
+  margin-top: 26vw;
+  top: 0;
+  border-top: solid $color-blue 0.5rem;
+  padding: 0 1rem;
+  z-index: 1;
+
+  .right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 3rem;
+        padding-left: .5rem;
+      }
+    }
+  }
+
+  a {
+    font-size: 1.2rem;
+    height: 100%;
+  }
+
+  a:hover {
+    color: $color-white;
+  }
+
+  .links {
+    padding-left: 4rem;
+  }
+
+  img {
+    height: 80%;
+  }
+}
+
 //About section
 
 .about {
-  margin-top: 26vw;
   box-shadow: -5rem 0 3rem rgba(0,0,0,.75);
-  border-top: solid $color-blue 0.5rem;
+  padding-top: 1rem;
 
   span {
     text-decoration: line-through;
