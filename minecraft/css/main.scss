@@ -25,6 +25,7 @@ ul {
 
 h1, h2, h3, p.lead {
   font-family: 'Russo One', sans-serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -125,7 +126,7 @@ p.lead {
   }
 
   img {
-    border: solid #f2f2f2 .4rem;
+    //border: solid #f2f2f2 .4rem;
     border-radius: .2rem;
     box-shadow: 1rem 1rem 4rem rgba(0,0,0,.6);
     transform: rotate(-3deg);
