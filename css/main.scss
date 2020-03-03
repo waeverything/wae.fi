@@ -298,16 +298,24 @@ ul {
     text-shadow: 0.1rem 0.1rem 0.5rem rgba(0,0,0,.5);
   }
 
-  &:hover .member-holisti {
+  .email {
+
+  }
+
+  .member-link {
+    color: $color-white;
+  }
+
+  .member-link:hover .member-holisti {
     opacity: 1;
   }
 
-  > img {
+  .member-link img {
     animation: memberunhover 0.5s ease forwards;
     transition: filter 0.4s;
   }
 
-  &:hover > img {
+  .member-link:hover img {
     animation: memberhover 0.8s ease forwards;
     filter: brightness(.5);
   }
