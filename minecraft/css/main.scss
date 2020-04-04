@@ -3,6 +3,7 @@ $color-dark: #262626;
 $color-blue: #04c2ff;
 
 $background-size: 10rem;
+$banner-height: 28rem;
 
 body {
   place-items: center;
@@ -11,7 +12,7 @@ body {
   overflow-x: hidden;
   transform-style: flat;
   color: #f2f2f2;
-  background-image: url("../img/textures/spruce_planks.jpg");
+  background: $color-dark url("../img/textures/dirt.jpg");
   background-size: $background-size;
 }
 
@@ -111,14 +112,19 @@ ul {
 }
 
 .banner {
-  background-position: center;
-  background-size: cover;
-  height: 28rem;
+  height: $banner-height;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  background-position: center;
+  background-size: cover;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
 
   .back {
     position: absolute;
@@ -156,6 +162,7 @@ ul {
   overflow: hidden;
   flex-flow: row wrap;
   z-index: 1;
+  margin-top: $banner-height;
 
   a {
     font-size: 1.5rem;
@@ -181,28 +188,29 @@ ul {
   border-bottom: solid 0.5rem $color-white;
 }
 
-.showcase {
-  grid-gap: 1rem;
-  padding-bottom: 0;
+.container.survival {
+  background-image: url("../img/textures/spruce_planks.jpg");
+  background-size: $background-size;
 
-  .item {
+  .screenshot-item {
     grid-template-columns: 1fr 1fr;
     grid-gap: 8rem;
     padding-top: 3rem;
-  }
+    padding-bottom: 0;
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 2rem 0;
-  }
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 2rem 0;
+    }
 
-  img {
-    //border: solid #f2f2f2 .4rem;
-    border-radius: 0.2rem;
-    box-shadow: 1rem 1rem 4rem rgba(0,0,0,.6);
-    transform: rotate(-3deg);
+    img {
+      //border: solid #f2f2f2 .4rem;
+      border-radius: 0.2rem;
+      box-shadow: 1rem 1rem 4rem rgba(0,0,0,.6);
+      transform: rotate(-3deg);
+    }
   }
 }
 
@@ -242,10 +250,10 @@ ul {
     grid-template-columns: 1fr minmax(auto, 86rem) 1fr;
   }
 
-  .showcase {
-    margin-bottom: -2rem;
+  .container.survival {
+    margin-bottom: -4rem;
 
-    .item {
+    .screenshot-item {
       display: grid;
     }
   }
