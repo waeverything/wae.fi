@@ -14,24 +14,183 @@
   <meta name="msapplication-TileColor" content="#cccccc">
   <meta name="theme-color" content="#222">
 
+  <script type="text/javascript" src="/js/modernizr-custom.js"></script>
+
   <link href="../css/normalize.css" rel="stylesheet">
   <link href="css/main.min.css" rel="stylesheet">
 </head>
 
 <body>
   <div class="banner">
-    <div class="content">
-      <h1><img src="../svg/wae-logo.svg" alt="">Minecraft</h1>
-      <iframe frameborder="0" src="https://namemc.com/server/wae.fi/embed"></iframe>
-      <p class="lead">Survival | Muut pelimuodot Soon™</p>
-    </div>
+    <a class="link-light back" href="/">Takaisin etusivulle</a>
 
-    <a class="back" href="../"><img src="../svg/fontawesome/arrow-left-solid-light.svg" alt="Back arrow">Takaisin etusivulle</a>
+    <span class="minecraft">Minecraft</span>
+    <iframe frameborder="0" src="https://namemc.com/server/wae.fi/embed"></iframe>
   </div>
 
-  <div class="showcase">
-    <div class="item left">
-      <img src="img/screenshots/cafe.jpg" alt="">
+  <div class="navbar">
+    <a class="link-light" href="#info">Info</a>
+    <a class="link-light" href="#survival">Survival</a>
+    <a class="link-light" href="#creative">Creative</a>
+    <a class="link-light prison" href="img/screenshots/prison.jpg">Prison</a>
+  </div>
+
+  <div class="container info">
+    <h1 id="info" class="category-header">Info</h1>
+    <p>Jos sivulta puuttuu jotain tietoa, niin Discordissa voi tulla laittamaan viestiä: Fabian Adrian#6234</p>
+    <h2>Palvelimella liikkuminen</h2>
+    <p>Meillä on tarjolla "useita" pelimuotoja, joiden välillä voit liikkua seuraavilla komennoilla.</p>
+    <table>
+      <tr>
+        <td>/lobby</td>
+        <td>Portaali kaikkiin pelimuotoihin</td>
+      </tr>
+      <tr>
+        <td>/survival</td>
+        <td>Klassinen Minecraft-kokemus miedoilla mausteilla</td>
+      </tr>
+      <tr>
+        <td>/creative</td>
+        <td>Luovaa rakentelua omilla ploteilla</td>
+      </tr>
+    </table>
+    <h2>Yksityisviestit ja ryhmächat</h2>
+    <p>Yksityisviestejä on mahdollista lähettää pelimuodosta riippumatta. Tämä tarkoittaa siis käytännössä sitä, että jos kaverisi on esimerkiksi creativessa ja itse olet survivalissa, voitte silti keskustella siitä mitä söitte eilen aamupalaksi tai mikä on WAE:n sinisen oikea värikoodi.</p>
+    <p>Palvelimeltamme löytyy myös ryhmäkeskustelut! Tässä komennot myös siihen:</p>
+    <table>
+      <tr>
+        <td>/gc [viesti]</td>
+        <td>Vaihda ryhmächat-tilaan/lähetä viesti ryhmään</td>
+      </tr>
+      <tr>
+        <td>/group create &lt;nimi&gt; [salasana]</td>
+        <td>Luo uusi ryhmä</td>
+      </tr>
+      <tr>
+        <td>/group join &lt;nimi&gt; [salasana]</td>
+        <td>Liity ryhmään</td>
+      </tr>
+      <tr>
+        <td>/group leave &lt;nimi&gt;</td>
+        <td>Poistu ryhmästä</td>
+      </tr>
+      <tr>
+        <td>/group &lt;nimi&gt;</td>
+        <td>Valitse ryhmä jossa haluat puhua</td>
+      </tr>
+      <tr>
+        <td>/group transfer &lt;pelaaja&gt;</td>
+        <td>Vaihda ryhmäkeskustelun omistajaa</td>
+      </tr>
+      <tr>
+        <td>/group delete &lt;nimi&gt;</td>
+        <td>Poistaa ryhmän</td>
+      </tr>
+      <tr>
+        <td>/group list &lt;nimi&gt;</td>
+        <td>Listaa ryhmän jäsenet</td>
+      </tr>
+    </table>
+    <h2>Muut komennot</h2>
+    <table>
+      <tr>
+        <td>/ignore</td>
+        <td>Piilottaa tietyn pelaajan viestit</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container survival">
+    <h1 id="survival" class="category-header">Survival</h1>
+
+    <h2 id="säännöt">Säännöt</h2>
+    <p>Survivalin puolella meillä on yksinkertaiset pelisäännöt varmistamassa sen, että kaikilla on mukavaa pelatessa. Luethan nämä tarkasti, sillä "Sori en lukenut sääntöjä" ei ikävä kyllä pelasta sinua tyhmiltä teoiltasi. Perusjärjellä pääsee jo pitkälle!</p>
+    <ul>
+      <li>Rakennusten vandalisointi on kielletty. Tämä pätee myös suojaamattomiin rakennuksiin!</li>
+      <li>Pidäthän rakentaessasi vähintään 200 palikkaa hajurakoa naapureihin, ellei toisin ole sovittu.</li>
+      <li>Epävirallisten Minecraft-versioiden käyttö on kielletty, OptiFine on kuitenkin sallittu.</li>
+      <li>Ulkopuolinen avustus, kuten: Macrot, autoclicker yms. on kielletty. Hiiren teippaaminen pohjaan ja muu näsäviisastelu lasketaan tähän mukaan. :D</li>
+      <li>"Duplicate glitchien" hyödyntäminen ei myöskään ole sallittua toimintaa.</li>
+    </ul>
+
+    <h2 id="alkuun">Näin pääset alkuun</h2>
+    <p>Spawnilta löytyy "RandomTP"-kyltit, joita klikkaamalla pystyy teleporttaamaan satunnaiseen paikkaan pelikartan sisällä. Jos et halua asua aivan spawnin lähettyvillä(Mitä emme myöskään suosittele!), tämä on helppo tapa päästä johonkin kauemmas. Huomaathan, että kylttejä voi käyttää vain kerran kahdessa päivässä, sillä ne on tarkoitettu lähinnä uusille pelaajille.</p>
+    <p>Meillä on myös käytössä /home komento, joka toimii hieman eri tavalla, kuin muualla. Kodin voi asettaa klikkaamalla sänkyä samalla, kun hiivit. Tämä mahdollistaa muissa sängyissä nukkumisen ilman, että koti vaihtaa paikkaa!</p>
+    <p>Ja viimeiseksi; Spawnille pääsee aina takaisin komennolla /spawn. Kaikissa "teleport"-komennoissa on puolen tunnin "cooldown", eli tätäkin komentoa voi käyttää vain puolen tunnin välein.</p>
+
+    <h2 id="suojaus">Rakennusten suojaus</h2>
+    <p>Voit suojata rakennuksesi muilta pelaajilta tonttien avulla. Oman tontin luonti onnistuu siten, että klikkaat kultalapiolla suojattavan alueen kahta vastakkaista kulmaa. Voit myös halutessasi muuttaa tontin kokoa jälkeenpäin klikkaamalla kultalapiolla yhtä olemassa olevan tontin kulmaa ja sen jälkeen palikkaa johon haluat tämän kyseisen kulman siirtää.</p>
+    <p>Sinulla on käytössäsi myös tikku, jolla palikkaa klikkaamalla pystyt tarkistamaan oman- tai muiden tonttien rajoja.</p>
+
+    <h2>Komennot tontin hallintaan</h2>
+    <table>
+      <tr>
+        <td>/abandonclaim</td>
+        <td>Poistaa tontin, jonka sisällä seisot</td>
+      </tr>
+      <tr>
+        <td>/abandonallclaims</td>
+        <td>Poistaa kaikki tontit</td>
+      </tr>
+      <tr>
+        <td>/claimexplosions</td>
+        <td>Sallii/kieltää räjähdykset</td>
+      </tr>
+      <tr>
+        <td>/trust</td>
+        <td>Antaa pelaajalle kaikki oikeudet tonttiin, jonka sisällä seisot</td>
+      </tr>
+      <tr>
+        <td>/accesstrust</td>
+        <td>Antaa pelaajalle oikeuden käyttää nappuloita, vipuja, painelaattoja yms</td>
+      </tr>
+      <tr>
+        <td>/containertrust</td>
+        <td>Antaa pelaajalle oikeuden penkoa arkkuja ja muita säilytyslaatikoita</td>
+      </tr>
+      <tr>
+        <td>/untrust</td>
+        <td>Poistaa pelaajalta oikeudet tontilta, jonka sisällä seisot</td>
+      </tr>
+      <tr>
+        <td>/untrustall</td>
+        <td>Poistaa pelaajalta oikeudet kaikkilta tonteilta</td>
+      </tr>
+      <tr>
+        <td>/trustlist</td>
+        <td>Listaa pelaajat, joilla on tontilla oikeuksia</td>
+      </tr>
+      <tr>
+        <td>/subdivideclaims</td>
+        <td>Vaihtaa lapion "alitontti"-tilaan</td>
+      </tr>
+      <tr>
+        <td>/basicclaims</td>
+        <td>Palauttaa lapion takaisin normaaliin tilaan</td>
+      </tr>
+      <tr>
+        <td>/claimslist</td>
+        <td>Näyttää tietoja tonteista</td>
+      </tr>
+      <tr>
+        <td>/trapped</td>
+        <td>Pelastaa sinut pälkähästä, jos jäät toisen tontille jumiin</td>
+      </tr>
+      <tr>
+        <td>/kfc</td>
+        <td>Potkii toisen pelaajan pois tontilta</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="container showcase">
+    <h2>Matkamuistoja</h2>
+    <div class="item">
+      <picture>
+        <source srcset="./img/screenshots/pippingskjol.webp" type="image/webp">
+        <source srcset="./img/screenshots/pippingskjol.jpg" type="image/jpeg">
+        <img src="./img/screenshots/pippingskjol.jpg" alt="Pippingskjöl memorial cafe.">
+      </picture>
       <div class="text">
         <h3>Pippingskjöl Memorial Café</h3>
         <p>Vuonna 1769 (nice) luostaripoika nimeltä Viljo "Larry" Pippingskjöl rakensi itselleen yksinäisyyden esikuvan: japanilaistyylisen linnan.
@@ -42,7 +201,48 @@
     </div>
   </div>
 
-  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <div class="container creative">
+    <h1 id="creative" class="category-header">Creative</h1>
+    <h2>Säännöt</h2>
+    <ul>
+      <li>Rakennathan järkevästi, ylläpito tulee poistamaan asiattomat plotit.</li>
+    </ul>
+    <h2>Komennot:</h2>
+    <table>
+      <tr>
+        <td>/p auto</td>
+        <td>Valtaa sinulle automaattisesti lähimmän vapaan plotin</td>
+      </tr>
+      <tr>
+        <td>/p claim</td>
+        <td>Valtaa sinulle plotin, mikäli kukaan muu ei ole ehtinyt ensin</td>
+      </tr>
+      <tr>
+        <td>/p delete</td>
+        <td>Poistaa sen plotin</td>
+      </tr>
+      <tr>
+        <td>/p clear</td>
+        <td>Tyhjentää plotin</td>
+      </tr>
+      <tr>
+        <td>/p home</td>
+        <td>Teleporttaa sinut omalle plotillesi</td>
+      </tr>
+      <tr>
+        <td>/p visit</td>
+        <td>Vieraile toisen pelaajan plotilla</td>
+      </tr>
+    </table>
+    <h2>Plottien yhdistäminen</h2>
+    <p>Mikäli haluat yhdistää plottisi, ota yhteyttä ylläpitoon joko Discordissa #minecraft-kanavalla tai pelissä /helpme komennolla!</p>
+  </div>
+
+  <div class="container footer">
+    <p class="copy">Copyright &copy 2020 — Fabian Adrian</p>
+  </div>
+
+  <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito:600" rel="stylesheet">
 </body>
 
