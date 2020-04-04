@@ -155,6 +155,7 @@ ul {
   top: 0;
   overflow: hidden;
   flex-flow: row wrap;
+  z-index: 1;
 
   a {
     font-size: 1.5rem;
