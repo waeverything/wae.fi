@@ -184,7 +184,6 @@ ul {
 .showcase {
   grid-gap: 1rem;
   padding-bottom: 0;
-  margin-bottom: -2rem;
 
   .item {
     grid-template-columns: 1fr 1fr;
@@ -196,7 +195,7 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
 
   img {
@@ -243,7 +242,11 @@ ul {
     grid-template-columns: 1fr minmax(auto, 86rem) 1fr;
   }
 
-  .showcase .item {
-    display: grid;
+  .showcase {
+    margin-bottom: -2rem;
+
+    .item {
+      display: grid;
+    }
   }
 }
