@@ -1,16 +1,25 @@
-MinecraftAPI.getServerStatus('wae.fi', {
-  port: 25565
-}, function(err, status) {
-  if (status.online == true) {
-    document.getElementById('publicMCVersion').innerHTML = "Versio: " + (status.server.name.split(" ").pop());
-    document.getElementById('publicMCPlayercount').innerHTML = "Pelaajamäärä: " + status.players.now + "/" + status.players.max;
-  }
-});
-MinecraftAPI.getServerStatus('wae.fi', {
-  port: 25566
-}, function(err, status) {
-  if (status.online == true) {
-    document.getElementById('holistiMCVersion').innerHTML = "Versio: " + (status.server.name.split(" ").pop());
-    document.getElementById('holistiMCPlayercount').innerHTML = "Pelaajamäärä: " + status.players.now + "/" + status.players.max;
-  }
-});
+fetch("https://api.mcsrvstat.us/2/wae.fi:25566")
+  .then(res => res.json())
+  .then((out) => {
+    if (out.online != true) {
+      return;
+    }
+    document.getElementById('holistiMCVersion').innerHTML = "Versio: " + out.version.split(" ").pop();
+    document.getElementById('holistiMCPlayercount').innerHTML = "Pelaajamäärä: " + out.players.online + "/" + out.players.max;
+  })
+  .catch(err => {
+    throw err
+  });
+
+fetch("https://api.mcsrvstat.us/2/wae.fi")
+  .then(res => res.json())
+  .then((out) => {
+    if (out.online != true) {
+      return;
+    }
+    document.getElementById('publicMCVersion').innerHTML = "Versio: " + out.version.split(" ").pop();
+    document.getElementById('publicMCPlayercount').innerHTML = "Pelaajamäärä: " + out.players.online + "/" + out.players.max;
+  })
+  .catch(err => {
+    throw err
+  });
