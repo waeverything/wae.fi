@@ -206,6 +206,7 @@ p {
     font-size: 1.4rem;
     border-left: .5rem solid colors.$primary;
     background: colors.$darker;
+    box-shadow: $box-shadow;
 
     p {
         padding: 1rem;

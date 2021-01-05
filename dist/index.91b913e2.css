@@ -280,6 +280,7 @@ p {
   font-size: 1.4rem;
   border-left: 0.5rem solid #04c2ff;
   background: #1d1d1d;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .blockquote p {
   padding: 1rem;
