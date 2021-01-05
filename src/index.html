@@ -45,7 +45,37 @@
     </div>
   </header>
 
-  <nav>
+  <nav class="navbar">
+    <div class="social-links">
+      <a href="https://youtube.com/WAEverything" target="_blank">
+        <img alt="Youtube logo" src="./images/icons/youtube-brands.svg">
+      </a>
+      <a href="https://www.twitch.tv/waeverything/" target="_blank">
+        <img alt="Twitch logo" src="./images/icons/twitch-brands.svg">
+      </a>
+      <a href="https://twitter.com/WAEverything" target="_blank">
+        <img alt="Twitter logo" src="./images/icons/twitter-brands.svg">
+      </a>
+      <a href="https://steamcommunity.com/groups/WAEverything" target="_blank">
+        <img alt="Steam logo" src="./images/icons/steam-brands.svg">
+      </a>
+    </div>
+
+    <input id="navbar-toggle" class="toggle" type="checkbox">
+    <label for="navbar-toggle" class="burger-wrapper">
+      <div class="hamburger"></div>
+    </label>
+
+    <div class="navbar-links">
+      <a href="#holistit">Holistit</a>
+      <a href="#palvelimet">Palvelimet</a>
+      <a href="#discord">Discord</a>
+    </div>
+  </nav>
+
+
+
+  <!--   <nav>
     <input id="navbar-toggle" class="toggle" type="checkbox">
     <label for="navbar-toggle" class="lbl-toggle"><img src="./images/icons/bars-solid.svg" alt="Chevron"></label>
     <div class="navbar-links">
@@ -79,7 +109,7 @@
         <img alt="Steam logo" src="./images/icons/steam-brands.svg">
       </a>
     </div>
-  </nav>
+  </nav> -->
 
   <div id="about" class="container">
     <div class="row">
@@ -229,10 +259,13 @@
     <div class="row">
       <div class="col">
         <img class="discord-logo" src="./images/Discord-Logo+Wordmark-White.svg" alt="Discord-Logo">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dignissimos molestiae, sequi, quam animi error sunt
-          ducimus iure sapiente dicta quibusdam illo provident ad rerum aspernatur! Nesciunt aliquam placeat incidunt
-          eos!
+        <p>Tervetuloa tänne matalaan majaamme ottamaan yliannostus kaikkea siistiä ja jännää! We Accidentally Everything
+          on videopeli-, sisällöntuotanto-, ja/tai nörttiyhteisö just sulle (lue: just sinä lukija), jos tykkäät
+          rankasta geimistä ja dänkeistä meemeistä! Tuu mukaan toimintaan liittymällä jäseneksi meidän Discordiin!
+          Kannattaa hypätä matalalla kynnyksellä juttuun mukaan - sitä ei ikinä tiedäkään mitä päädyt tekemään
+          kolmelta aamuyöstä äänikannuilla... Kyl sä tiiät miten tää menee - discord piste geegee kautta wae!
         </p>
+        <p>Psst, muista lukasta säännöt ennen postailua - ne ei oo pitkät!</p>
         <a href="https://discord.gg/wae" class="btn btn-discord">
           Liity Discordiin
         </a>
@@ -244,6 +277,13 @@
     <div class="row">
       <div class="col">
         <h2>Jäsenet</h2>
+        <div class="member-wrapper">
+          <div class="member">
+            <div class="tooltip">
+
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -450,10 +490,13 @@
     </div>
   </div> -->
 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
   <link
     href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
+
+
 
   <script src="./js/header.js"></script>
   <script src="https://mcapi.us/scripts/minecraft.js"></script>
