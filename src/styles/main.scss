@@ -102,7 +102,7 @@ p {
 }
 
 .container {
-    padding: 5rem 0;
+    padding: 6rem 0;
     z-index: 0;
     position: relative;
 }
@@ -202,8 +202,14 @@ p {
     }
 }
 
-.lead {
+.blockquote {
     font-size: 1.4rem;
+    border-left: .5rem solid colors.$primary;
+    background: colors.$darker;
+
+    p {
+        padding: 1rem;
+    }
 }
 
 .text-left {

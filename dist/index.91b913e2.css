@@ -195,7 +195,7 @@ p {
   background: #7289DA;
 }
 .container {
-  padding: 5rem 0;
+  padding: 6rem 0;
   z-index: 0;
   position: relative;
 }
@@ -276,8 +276,13 @@ p {
   margin: 0;
   text-align: center;
 }
-.lead {
+.blockquote {
   font-size: 1.4rem;
+  border-left: 0.5rem solid #04c2ff;
+  background: #1d1d1d;
+}
+.blockquote p {
+  padding: 1rem;
 }
 .text-left {
   text-align: left;
