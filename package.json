@@ -7,9 +7,12 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html ./src/minecraft/index.html"
+    "build": "parcel build ./src/index.html ./src/minecraft/index.html",
+    "fetch-pfp": "node ./dev-scripts/fetch-pfp"
   },
   "devDependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
     "parcel": "^2.0.0-nightly.506",
     "sass": "^1.30.0",
     "sharp": "^0.26.3"
