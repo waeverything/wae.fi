@@ -45,30 +45,33 @@
   </header>
 
   <nav class="navbar">
-    <div class="social-links">
-      <a href="https://youtube.com/WAEverything" target="_blank">
-        <img alt="Youtube logo" src="./images/icons/youtube-brands.svg">
-      </a>
-      <a href="https://www.twitch.tv/waeverything/" target="_blank">
-        <img alt="Twitch logo" src="./images/icons/twitch-brands.svg">
-      </a>
-      <a href="https://twitter.com/WAEverything" target="_blank">
-        <img alt="Twitter logo" src="./images/icons/twitter-brands.svg">
-      </a>
-      <a href="https://steamcommunity.com/groups/WAEverything" target="_blank">
-        <img alt="Steam logo" src="./images/icons/steam-brands.svg">
-      </a>
-    </div>
-
-    <input id="navbar-toggle" class="toggle" type="checkbox">
-    <label for="navbar-toggle" class="burger-wrapper">
-      <div class="hamburger"></div>
-    </label>
-
-    <div class="navbar-links">
-      <a href="#holistit">Holistit</a>
-      <a href="#palvelimet">Palvelimet</a>
-      <a href="#discord">Discord</a>
+    <div class="navbar-wrapper">
+      <div class="social-links">
+        <a href="https://youtube.com/WAEverything" target="_blank">
+          <img alt="Youtube logo" src="./images/icons/youtube-brands.svg">
+        </a>
+        <a href="https://www.twitch.tv/waeverything/" target="_blank">
+          <img alt="Twitch logo" src="./images/icons/twitch-brands.svg">
+        </a>
+        <a href="https://twitter.com/WAEverything" target="_blank">
+          <img alt="Twitter logo" src="./images/icons/twitter-brands.svg">
+        </a>
+        <a href="https://steamcommunity.com/groups/WAEverything" target="_blank">
+          <img alt="Steam logo" src="./images/icons/steam-brands.svg">
+        </a>
+      </div>
+  
+      <input id="navbar-toggle" class="toggle" type="checkbox">
+      <label for="navbar-toggle" class="burger-wrapper">
+        <div class="hamburger"></div>
+      </label>
+  
+      <div class="navbar-links">
+        <a href="#holistit">Holistit</a>
+        <a href="#palvelimet">Palvelimet</a>
+        <a href="#discord">Discord</a>
+        <a href="#jasenet">Jäsenet</a>
+      </div>
     </div>
   </nav>
 
@@ -105,69 +108,53 @@
         </p>
         <p>Helpoin ja suorin tapa tukea WAEverything-yhteisöä on tilata WAE:n Twitch-kanava, jonka pystyt tekemään alla
           olevasta linkistä!</p>
-        <a target="_blank" href="https://www.twitch.tv/waeverything/subscribe" class="btn">Tilaa WAEverything</a>
+        <a target="_blank" href="https://www.twitch.tv/waeverything/subscribe" class="btn"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa WAEverything</a>
         <p>Vaihtoehtoisesti Holistiroolin saa myös tukemalla yhtä tai useampaa alla olevaa WAE:n jäsentä:</p>
 
-        <div class="carddeck">
-          <div class="card">
-            <h4 class="card-title">Kahviholisti</h4>
+        <div class="holisti-roles">
+          <div class="holisti-item">
             <picture>
-              <source src="url:./images/members/jop.jpg?as=webp&quality=75&width=500" type="image/webp" />
-              <img class="card-image" src="url:./images/members/jop.jpg?quality=75&width=500">
+              <source srcset="./images/avatars/95869431216881664.webp" type="image/webp" />
+              <img src="./images/avatars/95869431216881664.jpg">
             </picture>
-            <div class="card-content">
-              <h3>J0P</h3>
-              <a target="_blank" href="https://www.youtube.com/c/J0PVid/join" class="btn btn-yt">Liity
-                jäseneksi</a>
-            </div>
+            <h4>J0P <span>— Kahviholisti</span></h4>
+            <a target="_blank" href="https://www.youtube.com/c/J0PVid/join" class="btn btn-yt"><img src="./images/icons/youtube-brands.svg" alt=""> Liity jäseneksi</a>
           </div>
-          <div class="card">
-            <h4 class="card-title">Alkoholisti</h4>
+
+          <div class="holisti-item">
             <picture>
-              <source src="url:./images/members/j3rmu.jpg?as=webp&quality=75&width=500" type="image/webp" />
-              <img class="card-image" src="url:./images/members/j3rmu.jpg?quality=75&width=500">
+              <source srcset="./images/avatars/95886487882567680.webp" type="image/webp" />
+              <img src="./images/avatars/95886487882567680.jpg">
             </picture>
-            <div class="card-content">
-              <h3>J3-RMU</h3>
-              <a target="_blank" href="https://www.twitch.tv/j3_rmu/subscribe" class="btn btn-twitch">Tilaa
-                Twitchissä</a>
-            </div>
+            <h4>J3-RMU <span>— Alkoholisti</span></h4>
+            <a target="_blank" href="https://www.twitch.tv/j3_rmu/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
-          <div class="card">
-            <h4 class="card-title">Honey Boo Boo</h4>
+
+          <div class="holisti-item">
             <picture>
-              <source src="url:./images/members/joona.jpg?as=webp&quality=75&width=500" type="image/webp" />
-              <img class="card-image" src="url:./images/members/joona.jpg?quality=75&width=500">
+              <source srcset="./images/avatars/277030763956928513.webp" type="image/webp" />
+              <img src="./images/avatars/277030763956928513.jpg">
             </picture>
-            <div class="card-content">
-              <h3>Joona</h3>
-              <a target="_blank" href="https://www.twitch.tv/jjoona/subscribe" class="btn btn-twitch">Tilaa
-                Twitchissä</a>
-            </div>
+            <h4>Joona <span>— Honey Boo Boo</span></h4>
+            <a target="_blank" href="https://www.twitch.tv/jjoona/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
-          <div class="card">
-            <h4 class="card-title">Conkeholisti</h4>
+
+          <div class="holisti-item">
             <picture>
-              <source src="url:./images/members/juizzi.jpg?as=webp&quality=75&width=500" type="image/webp" />
-              <img class="card-image" src="url:./images/members/juizzi.jpg?quality=75&width=500">
+              <source srcset="./images/avatars/99874548991672320.webp" type="image/webp" />
+              <img src="./images/avatars/99874548991672320.jpg">
             </picture>
-            <div class="card-content">
-              <h3>Juizzi</h3>
-              <a target="_blank" href="https://www.twitch.tv/juizzizen/subscribe" class="btn btn-twitch">Tilaa
-                Twitchissä</a>
-            </div>
+            <h4>Juizzi <span>— Conkeholisti</span></h4>
+            <a target="_blank" href="https://www.twitch.tv/juizzizen/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
-          <div class="card">
-            <h4 class="card-title">Absoholisti</h4>
+
+          <div class="holisti-item">
             <picture>
-              <source src="url:./images/members/nipde.jpg?as=webp&quality=75&width=500" type="image/webp" />
-              <img class="card-image" src="url:./images/members/nipde.jpg?quality=75&width=500">
+              <source srcset="./images/avatars/95899798749605888.webp" type="image/webp" />
+              <img src="./images/avatars/95899798749605888.jpg">
             </picture>
-            <div class="card-content">
-              <h3>Nipde</h3>
-              <a target="_blank" href="https://www.twitch.tv/nipde/subscribe" class="btn btn-twitch" c>Tilaa
-                Twitchissä</a>
-            </div>
+            <h4>Nipde <span>— Absoholisti</span></h4>
+            <a target="_blank" href="https://www.twitch.tv/nipde/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
         </div>
       </div>

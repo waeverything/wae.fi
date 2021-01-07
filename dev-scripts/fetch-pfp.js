@@ -29,7 +29,7 @@ const ids = [
 
 
 // avatar dimensions
-const ImageSize = 512;
+const ImageSize = 256;
 
 // avatar savelocation;
 const SaveLocation = '/../src/images/avatars/';
