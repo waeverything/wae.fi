@@ -485,26 +485,13 @@ function createBannerElements(barCount) {
   for (let i = 0; i < barCount; i++) {
     const elem = document.createElement("img");
     elem.setAttribute("src", _urlImagesHeader3dbarSvgDefault.default);
-    elem.style.animationDelay = Math.floor(Math.random() * -60) + "s";
-    elem.style.opacity = Math.random() * 1;
+    elem.style.animationDelay = (Math.random() * -60).toFixed(1) + "s";
+    elem.style.opacity = Math.random();
     elementDiv.appendChild(elem);
   }
 }
 
-document.onload = createBannerElements(12); //Typewriter
-
-/* let txt = 'We Accidentally Everything';
-let speed = 100;
-let i = 0;
-
-function typeWriter() {
-  if(i < txt.length) {
-    document.getElementById("typewriter").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-} */
-//window.onload = setTimeout(typeWriter, 1000);
+document.onload = createBannerElements(12);
 },{"url:../images/header/3dbar.svg":"7zqz8","@parcel/transformer-js/lib/esmodule-helpers.js":"HNevC"}],"7zqz8":[function(require,module,exports) {
 module.exports = require('./bundle-url').getBundleURL() + require('./relative-path')("5Hitd", "318o8")
 },{"./bundle-url":"3nFkr","./relative-path":"3gCji"}],"3nFkr":[function(require,module,exports) {

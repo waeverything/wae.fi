@@ -50,35 +50,27 @@ p {
 }
 
 picture {
-    > * {
-        display: block;
-        float: left;
+    img {
+        //display: block;
+        //float: left;
         height: 100%;
     }
 }
 
-.link-light {
-    font-weight: bold;
-    color: colors.$light;
-
-    &:hover {
-        color: colors.$primary;
-    }
-}
-
 .btn {
-    background: colors.$primary;
-    color: colors.$light;
-    height: 3rem;
-    padding: 0 .5rem;
-    display: inline-flex;
-    justify-content: center;
     align-items: center;
-    font-weight: bold;
-    box-shadow: $box-shadow;
-    border: $border;
-    position: relative;
     backface-visibility: hidden;
+    background: colors.$primary;
+    border: $border;
+    box-shadow: $box-shadow;
+    color: colors.$light;
+    display: inline-flex;
+    font-weight: bold;
+    height: 3rem;
+    justify-content: center;
+    padding: 0 .5rem;
+    position: relative;
+    text-align: center;
 
     &::after {
         content: "";
@@ -102,7 +94,7 @@ picture {
 }
 
 .btn-block {
-    display: block;
+    display: flex;
 }
 
 .btn-yt {
@@ -124,16 +116,18 @@ picture {
 }
 
 .container-bg {
-    content: "";
-    top: 0;
-    position: absolute;
-    left: 0;
-    width: 100vw;
     height: 100%;
+    left: 0;
     opacity: .25;
-    object-fit: cover;
-    object-position: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
     z-index: -1;
+
+    img {
+        object-fit: cover;
+        width: 100vw;
+    }
 }
 
 .row {
@@ -192,6 +186,10 @@ picture {
             font-size: 1rem;
         }
     }
+
+    .btn {
+        box-shadow: none;
+    }
 }
 
 .card {
@@ -247,9 +245,8 @@ picture {
     }
 
     .list-button .btn {
-        display: block;
         margin: 0;
-        text-align: center;
+        //text-align: center;
     }
 }
 
@@ -279,12 +276,11 @@ picture {
 }
 
 .navbar-wrapper {
-    min-height: 4rem;
-    overflow: hidden;
+    //min-height: 4rem;
+    //overflow: hidden;
     display: grid;
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr auto;
-    
     grid-column: 2;
 
     img {
@@ -306,8 +302,7 @@ picture {
 
                 &:after,
                 &:before {
-                    transition: top 300ms 50ms ease,
-                        transform 300ms 350ms ease;
+                    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
                     top: 0;
                 }
 
@@ -340,26 +335,22 @@ picture {
     }
 
     a {
-        display: inline-block;
-
-        img {
-            display: block;
-        }
+        transition: color .35s, border-bottom .35s;
+        border-bottom: colors.$primary 0 solid;
     }
 }
 
-$s: .25rem;
-
+$burger-size: .25rem;
 .burger-wrapper {
-    width: $s*10;
-    height: $s*8;
+    width: $burger-size*10;
+    height: $burger-size*8;
     display: flex;
     align-items: center;
 
     .hamburger {
         background: colors.$light;
-        width: $s*10;
-        height: $s;
+        width: $burger-size*10;
+        height: $burger-size;
         position: relative;
         transition: background 10ms 300ms ease;
 
@@ -369,18 +360,18 @@ $s: .25rem;
                 transform 300ms 50ms ease;
             position: absolute;
             background: colors.$light;
-            width: $s*10;
-            height: $s;
+            width: $burger-size*10;
+            height: $burger-size;
             content: '';
             right: 0;
         }
 
         &:before {
-            top: $s*-3;
+            top: $burger-size*-3;
         }
 
         &:after {
-            top: $s*3;
+            top: $burger-size*3;
         }
     }
 }
@@ -428,6 +419,7 @@ header {
         position: absolute;
         right: 0;
         top: 0;
+        //opacity: .5;
 
         img {
             height: 100%;
@@ -472,19 +464,11 @@ header {
 #holistit {
     background: colors.$darker;
     position: relative;
-
-    .container-bg {
-        object-position: bottom right;
-    }
 }
 
 #discord {
     background: colors.$darker;
     position: relative;
-
-    .container-bg {
-        object-position: top left;
-    }
 
     .discord-logo {
         width: 24rem;
@@ -527,22 +511,10 @@ header {
         }
     }
 
-    .navbar-links a:after,
-    .navbar .social-links a:after {
-        content: "";
-        bottom: 0;
-        left: 0;
-        height: 0;
-        right: 0;
-        background-color: colors.$primary;
-        transition: height .35s;
-        position: absolute;
-        z-index: -1;
-    }
-
-    .navbar-links a:hover:after,
-    .navbar .social-links a:hover:after {
-        height: 100%;
+    .navbar-links a:hover,
+    .navbar .social-links a:hover {
+        border-bottom-width: .25rem;
+        color: colors.$primary;
     }
 
     .navbar-links {
