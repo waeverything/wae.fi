@@ -1,4 +1,9 @@
-node_modules
-.parcel-cache
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
 .DS_Store
 .env
+.parcel-cache
