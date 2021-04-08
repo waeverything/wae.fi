@@ -15,37 +15,46 @@
     <div id="backgroundElements">
 
     </div>
-    <div id="discordWidget">
-      <div id="widgetObject" class="object">
-        <div class="top">
-          <div class="content">
-            <a href="https://discord.gg/wae" class="btn btn-block btn-discord">
-              Liity Discordiin
-            </a>
-          </div>
-        </div>
-        <div class="front">
-          <div class="content">
-            <img class="server-icon" src="url:./images/server-icon.jpg?quality=75&width=150" alt="">
-            <p>discord.gg/<span class="url-color">wae</span></p>
-            <img class="discord-icon" src="images/icons/discord-brands.svg" alt="">
-          </div>
-        </div>
-        <div class="flank">
-          <p id="memberCount" class="content">
-            Online -<span>000</span>
-          </p>
-        </div>
-      </div>
-    </div>
     <div class="content">
       <img src="images/brand-logo.svg" alt="Brand logo">
-      <h1>We Accidentally Everything</h1>
+      <p class="h1">We Accidentally Everything</p>
     </div>
   </header>
 
+  <div id="discordWidget" class="discord-widget">
+    <div class="box-wrapper">
+      <div class="up">
+        <a href="https://discord.gg/wae" class="btn btn-block btn-discord">Liity Discordiin</a>
+      </div>
+      <div class="front">
+        <img class="guild-icon" src="./images/server-icon.jpg" alt="">
+        <div class="text">discord.gg/<span>wae</span></div>
+        <img class="discord-logo" src="images/icons/discord-brands.svg" alt="">
+      </div>
+      <div class="down">
+        <div class="text">Online -<span id="memberCount"></span></div>
+      </div>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="navbar-wrapper">
+      <input id="navbar-toggle" class="toggle" type="checkbox">
+      <label for="navbar-toggle" class="hamburger-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+
+      <div class="navbar-links">
+        <a href="#holistit">Holistit</a>
+        <a href="#palvelimet">Palvelimet</a>
+        <a href="#discord">Discord</a>
+        <a href="#jasenet">Jäsenet</a>
+      </div>
+
       <div class="social-links">
         <a href="https://youtube.com/WAEverything" target="_blank">
           <img alt="Youtube logo" src="./images/icons/youtube-brands.svg">
@@ -60,18 +69,6 @@
           <img alt="Steam logo" src="./images/icons/steam-brands.svg">
         </a>
       </div>
-  
-      <input id="navbar-toggle" class="toggle" type="checkbox">
-      <label for="navbar-toggle" class="burger-wrapper">
-        <div class="hamburger"></div>
-      </label>
-  
-      <div class="navbar-links">
-        <a href="#holistit">Holistit</a>
-        <a href="#palvelimet">Palvelimet</a>
-        <a href="#discord">Discord</a>
-        <a href="#jasenet">Jäsenet</a>
-      </div>
     </div>
   </nav>
 
@@ -81,7 +78,8 @@
         <div class="blockquote">
           <p>WAE on suomalainen pelipainoitteinen yhteisö, jonka tarkoituksena on kerätä samanhenkistä
             porukkaa
-            yhteen. Yhteisömme pärähti ensimmäisen kerran käyntiin, kun vuonna 2015 muutamat innokkaat kaverukset pistivät
+            yhteen. Yhteisömme pärähti ensimmäisen kerran käyntiin, kun vuonna 2015 muutamat innokkaat kaverukset
+            pistivät
             pystyyn Youtube-kanavan. Sitä seuraten, vähän myöhemmin WAE:lle luotiin myös Discord-palvelin, jossa tämän
             pienen peliporukan ympärille on tasaista tahtia muodostunut melko suurikokoinen yhteisö. Nykyään yhteisömme
             rakentuu hyvin vahvasti Discordin-ympärille, jonka jäsenluku lähestyy jo toista tuhatta. Pidämme myös yllä
@@ -95,12 +93,12 @@
 
   <div id="holistit" class="container">
     <picture class="container-bg">
-      <source src="url:./images/backgrounds/holisti-bg1.png?as=webp&quality=75&width=1920" type="image/webp" />
-      <img src="url:./images/backgrounds/holisti-bg1.png?as=jpg&quality=75&width=1920" alt="">
+      <!-- <source src="url:./images/backgrounds/holisti-bg1.png?as=webp&quality=75&width=1920" type="image/webp" /> -->
+      <img src="./images/backgrounds/holisti-bg1.png" alt="">
     </picture>
     <div class="row">
       <div class="col">
-        <h2>Holistit</h2>
+        <h1>Holistit</h1>
         <p>Holisti on rooli kaikille niille ketkä tukevat meitä tavalla tai toisella! Holistiroolilla saat auki uusia
           "Holisti-exclusive" kanavia Discord-palvelimellamme sekä pääsyn Holistien Minecraft-palvelimille. Tämän
           lisäksi
@@ -108,7 +106,8 @@
         </p>
         <p>Helpoin ja suorin tapa tukea WAEverything-yhteisöä on tilata WAE:n Twitch-kanava, jonka pystyt tekemään alla
           olevasta linkistä!</p>
-        <a target="_blank" href="https://www.twitch.tv/waeverything/subscribe" class="btn"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa WAEverything</a>
+        <a target="_blank" href="https://www.twitch.tv/waeverything/subscribe" class="btn"><img
+            src="./images/icons/twitch-brands.svg" alt=""> Tilaa WAEverything</a>
         <p>Vaihtoehtoisesti Holistiroolin saa myös tukemalla yhtä tai useampaa alla olevaa WAE:n jäsentä:</p>
 
         <div class="holisti-roles">
@@ -118,7 +117,8 @@
               <img src="./images/avatars/95869431216881664.jpg">
             </picture>
             <h4>J0P <span>— Kahviholisti</span></h4>
-            <a target="_blank" href="https://www.youtube.com/c/J0PVid/join" class="btn btn-yt"><img src="./images/icons/youtube-brands.svg" alt=""> Liity jäseneksi</a>
+            <a target="_blank" href="https://www.youtube.com/c/J0PVid/join" class="btn btn-yt"><img
+                src="./images/icons/youtube-brands.svg" alt=""> Liity jäseneksi</a>
           </div>
 
           <div class="holisti-item">
@@ -127,7 +127,8 @@
               <img src="./images/avatars/95886487882567680.jpg">
             </picture>
             <h4>J3-RMU <span>— Alkoholisti</span></h4>
-            <a target="_blank" href="https://www.twitch.tv/j3_rmu/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+            <a target="_blank" href="https://www.twitch.tv/j3_rmu/subscribe" class="btn btn-twitch"><img
+                src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
 
           <div class="holisti-item">
@@ -136,7 +137,8 @@
               <img src="./images/avatars/277030763956928513.jpg">
             </picture>
             <h4>Joona <span>— Honey Boo Boo</span></h4>
-            <a target="_blank" href="https://www.twitch.tv/jjoona/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+            <a target="_blank" href="https://www.twitch.tv/jjoona/subscribe" class="btn btn-twitch"><img
+                src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
 
           <div class="holisti-item">
@@ -145,7 +147,8 @@
               <img src="./images/avatars/99874548991672320.jpg">
             </picture>
             <h4>Juizzi <span>— Conkeholisti</span></h4>
-            <a target="_blank" href="https://www.twitch.tv/juizzizen/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+            <a target="_blank" href="https://www.twitch.tv/juizzizen/subscribe" class="btn btn-twitch"><img
+                src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
 
           <div class="holisti-item">
@@ -154,7 +157,8 @@
               <img src="./images/avatars/95899798749605888.jpg">
             </picture>
             <h4>Nipde <span>— Absoholisti</span></h4>
-            <a target="_blank" href="https://www.twitch.tv/nipde/subscribe" class="btn btn-twitch"><img src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+            <a target="_blank" href="https://www.twitch.tv/nipde/subscribe" class="btn btn-twitch"><img
+                src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
           </div>
         </div>
       </div>
@@ -164,7 +168,7 @@
   <div id="palvelimet" class="container">
     <div class="row">
       <div class="col">
-        <h2>Palvelimet</h2>
+        <h1>Palvelimet</h1>
         <div class="server-wrap">
           <ul class="border-list">
             <li class="list-image"><img src="./images/minecraft-java-edition-logo.png" alt=""></li>
@@ -203,8 +207,8 @@
 
   <div id="discord" class="container text-left">
     <picture class="container-bg">
-      <source src="url:./images/backgrounds/discord-bg.png?as=webp&quality=75=width=1920" type="image/webp" />
-      <img src="url:./images/backgrounds/discord-bg.png?as=jpg&quality=75=width=1920" alt="">
+      <!-- <source src="url:./images/backgrounds/discord-bg.png?as=webp&quality=75=width=1920" type="image/webp" /> -->
+      <img src="./images/backgrounds/discord-bg.png" alt="">
     </picture>
     <div class="row">
       <div class="col">
@@ -226,7 +230,7 @@
   <div id="jasenet" class="container">
     <div class="row">
       <div class="col">
-        <h2>Jäsenet</h2>
+        <h1>Jäsenet</h1>
         <div class="member-wrapper">
           <div class="member">
             <div class="tooltip">
@@ -396,9 +400,7 @@
   </div> -->
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Russo+One&display=swap"
     rel="stylesheet">
 
 

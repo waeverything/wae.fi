@@ -1,0 +1,2 @@
+!function(){function n(n,e){fetch("https://api.mcsrvstat.us/2/"+e).then((function(n){return n.json()})).then((function(e){1==e.online&&(document.getElementById(n+"Version").innerHTML=e.version.split(" ").pop(),document.getElementById(n+"Players").innerHTML=e.players.online+"/"+e.players.max)})).catch((function(n){throw n}))}n("publicMinecraft","wae.fi:25565"),n("holistiMinecraft","wae.fi:25566"),n("snapshotMinecraft","wae.fi:25567")}();
+//# sourceMappingURL=server-query.94cc9c7a.js.map

@@ -1,0 +1,2 @@
+!function(){const e=document.getElementById("discordWidget"),t=document.getElementById("memberCount");function n(){fetch("https://discordapp.com/api/guilds/95873997861834752/widget.json").then((e=>e.json())).then((n=>{t.innerHTML=n.presence_count,e.classList.add("show"),setTimeout((function(){e.classList.remove("show")}),7e3)})).catch((e=>{throw e}))}setTimeout((function(){n(),setInterval(n,8e4)}),3e3)}();
+//# sourceMappingURL=index.ea01909b.js.map

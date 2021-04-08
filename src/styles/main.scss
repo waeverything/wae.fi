@@ -1,52 +1,17 @@
-@use 'colors';
-@use 'discord-widget';
-
-$container-width: 86rem;
-$border: rgba(255, 255, 255, .1) 1px solid;
-$box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, .15);
+@use 'abstracts' as *;
+@use 'components';
+@use 'layout';
 
 body {
     backface-visibility: hidden;
-    background: colors.$darkest;
-    color: colors.$light;
+    background: $clr-darkest;
+    color: $clr-white;
     font: 1rem 'Roboto Condensed', sans-serif;
     text-align: center;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Russo One', sans-serif;
-    margin: 0;
-    padding: .5rem 0;
-}
-
-h1 {
-    font-size: 3rem;
-}
-
-h2 {
-    font-size: 2.5rem;
-}
-
-h3 {
-    font-size: 1.5rem;
-}
-
-h4 {
-    margin: 0;
-    padding: .5rem 0;
-    font-size: 1.2rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-p {
-    margin: 0;
-    padding: 1rem 0;
-    font-weight: bold;
+img {
+    max-height: 100%;
 }
 
 picture {
@@ -55,64 +20,6 @@ picture {
         //float: left;
         height: 100%;
     }
-}
-
-.btn {
-    align-items: center;
-    backface-visibility: hidden;
-    background: colors.$primary;
-    border: $border;
-    box-shadow: $box-shadow;
-    color: colors.$light;
-    display: inline-flex;
-    font-weight: bold;
-    height: 3rem;
-    justify-content: center;
-    padding: 0 .5rem;
-    position: relative;
-    text-align: center;
-
-    &::after {
-        content: "";
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 0%;
-        background-color: rgba(255, 255, 255, .35);
-        transition: all .35s;
-        position: absolute;
-    }
-
-    &:hover::after {
-        height: 100%;
-    }
-
-    img {
-        height: 2rem;
-        padding-right: .5rem; 
-    }
-}
-
-.btn-block {
-    display: flex;
-}
-
-.btn-yt {
-    background: #ff0000;
-}
-
-.btn-twitch {
-    background: #9147ff;
-}
-
-.btn-discord {
-    background: #7289DA;
-}
-
-.container {
-    padding: 6rem 0;
-    z-index: 0;
-    position: relative;
 }
 
 .container-bg {
@@ -130,22 +37,6 @@ picture {
     }
 }
 
-.row {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, $container-width) 1fr;
-    padding: 1rem;
-
-    >* {
-        grid-column: 2;
-    }
-}
-
-.col {
-    >.btn {
-        margin: 1rem 0;
-    }
-}
-
 .holisti-roles {
     display: flex;
     flex-wrap: wrap;
@@ -155,7 +46,7 @@ picture {
 }
 
 .holisti-item {
-    background: colors.$darker;
+    background: $clr-darker;
     box-shadow: $box-shadow;
     border: $border;
     display: grid;
@@ -193,7 +84,7 @@ picture {
 }
 
 .card {
-    background: colors.$darker;
+    background: $clr-darker;
     box-shadow: $box-shadow;
     border: $border;
     display: grid;
@@ -209,14 +100,14 @@ picture {
 
 .card-title {
     width: 100%;
-    background: colors.$dark;
+    background: $clr-dark;
 }
 
 .border-list {
     list-style: none;
     border: $border;
     padding: 0;
-    background: colors.$darker;
+    background: $clr-darker;
     text-align: left;
     box-shadow: $box-shadow;
 
@@ -227,7 +118,7 @@ picture {
     }
 
     .list-image {
-        background: colors.$primary;
+        background: $clr-primary;
         border-top: none;
 
         img {
@@ -236,7 +127,7 @@ picture {
     }
 
     .list-title {
-        background: colors.$dark;
+        background: $clr-dark;
 
         h3 {
             text-align: center;
@@ -251,8 +142,8 @@ picture {
 }
 
 .blockquote {
-    border-left: .5rem solid colors.$primary;
-    background: colors.$darker;
+    border-left: .5rem solid $clr-primary;
+    background: $clr-darker;
     box-shadow: $box-shadow;
 
     p {
@@ -264,210 +155,13 @@ picture {
     text-align: left;
 }
 
-.navbar {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, $container-width) 1fr;
-    background: colors.$darker;
-    border: $border;
-    box-shadow: $box-shadow;
-    position: sticky;
-    top: 0;
-    z-index: 1;
-}
-
-.navbar-wrapper {
-    //min-height: 4rem;
-    //overflow: hidden;
-    display: grid;
-    grid-template-rows: 1fr auto;
-    grid-template-columns: 1fr auto;
-    grid-column: 2;
-
-    img {
-        height: 2rem;
-    }
-
-    .toggle {
-        display: none;
-    }
-
-    .burger-wrapper {
-        padding: 1rem;
-    }
-
-    .toggle:checked {
-        ~.burger-wrapper {
-            .hamburger {
-                background: transparent;
-
-                &:after,
-                &:before {
-                    transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-                    top: 0;
-                }
-
-                &:before {
-                    transform: rotate(45deg);
-                }
-
-                &:after {
-                    transform: rotate(-45deg);
-                }
-            }
-        }
-    }
-
-    .toggle:checked+.burger-wrapper+.navbar-links {
-        max-height: 100vh;
-    }
-
-    .social-links {
-        margin-right: auto;
-        display: flex;
-
-        a {
-            padding: 0 1rem;
-            display: flex;
-            align-items: center;
-            flex-direction: row;
-            position: relative;
-        }
-    }
-
-    a {
-        transition: color .35s, border-bottom .35s;
-        border-bottom: colors.$primary 0 solid;
-    }
-}
-
-$burger-size: .25rem;
-.burger-wrapper {
-    width: $burger-size*10;
-    height: $burger-size*8;
-    display: flex;
-    align-items: center;
-
-    .hamburger {
-        background: colors.$light;
-        width: $burger-size*10;
-        height: $burger-size;
-        position: relative;
-        transition: background 10ms 300ms ease;
-
-        &:before,
-        &:after {
-            transition: top 300ms 350ms ease,
-                transform 300ms 50ms ease;
-            position: absolute;
-            background: colors.$light;
-            width: $burger-size*10;
-            height: $burger-size;
-            content: '';
-            right: 0;
-        }
-
-        &:before {
-            top: $burger-size*-3;
-        }
-
-        &:after {
-            top: $burger-size*3;
-        }
-    }
-}
-
-.navbar-links {
-    grid-column: 1/3;
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-height: 0;
-    overflow: hidden;
-
-    a {
-        color: colors.$light;
-        text-transform: uppercase;
-        padding: 1rem;
-        font-size: 1.2rem;
-        font-weight: bold;
-        position: relative;
-        //text-shadow: 0 0 .5em colors.$primary;
-    }
-
-    a:nth-child(odd) {
-        background: colors.$dark;
-    }
-}
-
-header {
-    background: url('../images/backgrounds/polygon-background.svg') center / cover;
-    display: grid;
-    height: 24rem;
-    place-items: center;
-    position: relative;
-    text-align: center;
-
-    #backgroundElements {
-        bottom: 0;
-        display: grid;
-        grid-gap: .5rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(auto-fit, auto);
-        left: 0;
-        overflow: hidden;
-        padding: .5rem 0;
-        position: absolute;
-        right: 0;
-        top: 0;
-        //opacity: .5;
-
-        img {
-            height: 100%;
-            animation: scroll 60s linear infinite;
-            backface-visibility: hidden;
-        }
-    }
-
-    @keyframes scroll {
-        from {
-            transform: translateX(100vw);
-
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
-    >.content {
-        display: flex;
-        flex-direction: column;
-        z-index: 1;
-        padding: 1rem;
-        width: 100%;
-        box-sizing: border-box;
-
-        img {
-            height: 100%;
-            max-height: 8rem;
-            max-width: 100%;
-        }
-    }
-}
-
-#discordWidget {
-    top: 2vh;
-    right: 2vw;
-    display: none;
-}
-
 #holistit {
-    background: colors.$darker;
+    background: $clr-darker;
     position: relative;
 }
 
 #discord {
-    background: colors.$darker;
+    background: $clr-darker;
     position: relative;
 
     .discord-logo {
@@ -482,65 +176,5 @@ header {
         grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
         padding: 1rem 0;
         justify-content: center;
-    }
-}
-
-@media(min-width:42rem) {
-    header {
-        height: 42rem;
-
-        >.content img {
-            max-height: 18rem;
-        }
-    }
-
-    #discordWidget {
-        display: inline-block;
-    }
-
-    .navbar-wrapper {
-        grid-template-columns: 1fr auto;
-        grid-template-rows: 1fr;
-
-        .burger-wrapper {
-            display: none;
-        }
-
-        .social-links {
-            grid-column: 2;
-        }
-    }
-
-    .navbar-links a:hover,
-    .navbar .social-links a:hover {
-        border-bottom-width: .25rem;
-        color: colors.$primary;
-    }
-
-    .navbar-links {
-        grid-column: 1;
-        grid-row: 1;
-        flex-direction: row;
-        min-height: 4rem;
-        justify-content: space-evenly;
-
-        a {
-            background: none !important;
-            display: flex;
-            align-items: center;
-            //padding: 1rem 2rem;
-            width: 100%;
-            justify-content: center;
-        }
-    }
-}
-
-@media(min-width: 74rem) {
-    h1 {
-        font-size: 5rem;
-    }
-
-    h2 {
-        font-size: 3.5rem;
     }
 }

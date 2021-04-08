@@ -1,0 +1,23 @@
+@use 'abstracts' as *;
+
+.container {
+    padding: 6rem 0;
+    z-index: 0;
+    position: relative;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, $container-width) 1fr;
+    padding: 1rem;
+
+    >* {
+        grid-column: 2;
+    }
+}
+
+.col {
+    >.btn {
+        margin: 1rem 0;
+    }
+}
