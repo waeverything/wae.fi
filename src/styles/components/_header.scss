@@ -50,6 +50,7 @@ header {
     padding: 1rem;
     position: absolute;
     align-items: center;
+    filter: drop-shadow($box-shadow);
 
     img {
       height: $header-height / 2;

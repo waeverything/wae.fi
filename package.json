@@ -21,6 +21,7 @@
   "homepage": "https://github.com/waeverything/wae.fi#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "discord.js": "^12.5.3",
     "parcel": "^2.0.0-beta.2"
   }
 }
