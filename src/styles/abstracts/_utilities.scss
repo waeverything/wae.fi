@@ -1,0 +1,21 @@
+@use 'colors' as *;
+
+.bg-darkest {
+  background-color: $clr-darkest;
+}
+.bg-darker {
+  background-color: $clr-darker;
+}
+.bg-white {
+  background-color: $clr-white;
+}
+.text-gray {
+  color: $clr-gray;
+}
+.text-left {
+    text-align: left;
+}
+.link-primary {
+  color: $clr-primary;
+  text-decoration: underline;
+}

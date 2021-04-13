@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>WAEverything</title>
+
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/main.scss">
+</head>
+
+<body>
+  <header>
+    <div id="backgroundElements">
+
+    </div>
+    <div class="content">
+      <img src="images/brand-logo.svg" alt="Brand logo">
+      <p class="h1">We Accidentally Everything</p>
+    </div>
+  </header>
+
+  <div id="discordWidget" class="discord-widget">
+    <div class="box-wrapper">
+      <div class="up">
+        <a href="https://discord.gg/wae" class="btn btn-block btn-discord">Liity Discordiin</a>
+      </div>
+      <div class="front">
+        <img class="guild-icon" src="./images/server-icon-optimized.jpg" alt="">
+        <div class="text">discord.gg/<span>wae</span></div>
+        <img class="discord-logo" src="images/icons/discord-brands.svg" alt="">
+      </div>
+      <div class="down">
+        <div class="text">Online -<span id="memberCount"></span></div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-wrapper">
+      <input id="navbar-toggle" class="toggle" type="checkbox">
+      <label for="navbar-toggle" class="hamburger-toggle">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </label>
+
+      <div class="navbar-links">
+        <a href="#holistit">Holistit</a>
+        <a href="#palvelimet">Palvelimet</a>
+        <a href="#discord">Discord</a>
+        <a href="#jasenet">Jäsenet</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://youtube.com/WAEverything" target="_blank">
+          <img alt="Youtube logo" src="./images/icons/youtube-brands.svg">
+        </a>
+        <a href="https://www.twitch.tv/waeverything/" target="_blank">
+          <img alt="Twitch logo" src="./images/icons/twitch-brands.svg">
+        </a>
+        <a href="https://twitter.com/WAEverything" target="_blank">
+          <img alt="Twitter logo" src="./images/icons/twitter-brands.svg">
+        </a>
+        <a href="https://steamcommunity.com/groups/WAEverything" target="_blank">
+          <img alt="Steam logo" src="./images/icons/steam-brands.svg">
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="about">
+    <div class="container">
+      <div class="blockquote">
+        <p>WAE on suomalainen pelipainoitteinen yhteisö, jonka tarkoituksena on kerätä samanhenkistä
+          porukkaa
+          yhteen. Yhteisömme pärähti ensimmäisen kerran käyntiin, kun vuonna 2015 muutamat innokkaat kaverukset
+          pistivät
+          pystyyn Youtube-kanavan. Sitä seuraten, vähän myöhemmin WAE:lle luotiin myös Discord-palvelin, jossa tämän
+          pienen peliporukan ympärille on tasaista tahtia muodostunut melko suurikokoinen yhteisö. Nykyään yhteisömme
+          rakentuu hyvin vahvasti Discordin-ympärille, jonka jäsenluku lähestyy jo toista tuhatta. Pidämme myös yllä
+          useita julkisia pelipalvelimia, jotka ovat tärkeä osa yhdessä ajan viettämistä ja hauskan pitämistä. Kaikki
+          ovat
+          tervetulleita meidän yhteisöön ja toivottavasti näemme myös sinua siellä!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="holistit" class="bg-darker">
+    <div class="container">
+      <h1>Holistit</h1>
+      <p>Holisti on rooli kaikille niille ketkä tukevat meitä tavalla tai toisella! Holistiroolilla saat auki uusia
+        "Holisti-exclusive" kanavia Discord-palvelimellamme sekä pääsyn Holistien Minecraft-palvelimille. Tämän
+        lisäksi
+        Holistit pääsevät aika ajoin vaikuttamaan yhteisömme ja palvelimemme kehitykseen ja Vuoden töhö -äänestykseen!
+      </p>
+      <p>Helpoin ja suorin tapa tukea WAEverything-yhteisöä on tilata WAE:n Twitch-kanava, jonka pystyt tekemään alla
+        olevasta linkistä!</p>
+      <a target="_blank" href="https://www.twitch.tv/waeverything/subscribe" class="btn"><img
+          src="./images/icons/twitch-brands.svg" alt=""> Tilaa WAEverything</a>
+      <p>Vaihtoehtoisesti Holistiroolin saa myös tukemalla yhtä tai useampaa alla olevaa WAE:n jäsentä:</p>
+      <div class="holisti-roles">
+        <div class="holisti-item">
+          <picture>
+            <source srcset="./images/avatars/95869431216881664.webp" type="image/webp" />
+            <img src="./images/avatars/95869431216881664.jpg">
+          </picture>
+          <h4>J0P <span>— Kahviholisti</span></h4>
+          <a target="_blank" href="https://www.youtube.com/c/J0PVid/join" class="btn btn-yt"><img
+              src="./images/icons/youtube-brands.svg" alt=""> Liity jäseneksi</a>
+        </div>
+        <div class="holisti-item">
+          <picture>
+            <source srcset="./images/avatars/95886487882567680.webp" type="image/webp" />
+            <img src="./images/avatars/95886487882567680.jpg">
+          </picture>
+          <h4>J3-RMU <span>— Alkoholisti</span></h4>
+          <a target="_blank" href="https://www.twitch.tv/j3_rmu/subscribe" class="btn btn-twitch"><img
+              src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+        </div>
+        <div class="holisti-item">
+          <picture>
+            <source srcset="./images/avatars/277030763956928513.webp" type="image/webp" />
+            <img src="./images/avatars/277030763956928513.jpg">
+          </picture>
+          <h4>Joona <span>— Honey Boo Boo</span></h4>
+          <a target="_blank" href="https://www.twitch.tv/jjoona/subscribe" class="btn btn-twitch"><img
+              src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+        </div>
+        <div class="holisti-item">
+          <picture>
+            <source srcset="./images/avatars/99874548991672320.webp" type="image/webp" />
+            <img src="./images/avatars/99874548991672320.jpg">
+          </picture>
+          <h4>Juizzi <span>— Conkeholisti</span></h4>
+          <a target="_blank" href="https://www.twitch.tv/juizzizen/subscribe" class="btn btn-twitch"><img
+              src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+        </div>
+        <div class="holisti-item">
+          <picture>
+            <source srcset="./images/avatars/95899798749605888.webp" type="image/webp" />
+            <img src="./images/avatars/95899798749605888.jpg">
+          </picture>
+          <h4>Nipde <span>— Absoholisti</span></h4>
+          <a target="_blank" href="https://www.twitch.tv/nipde/subscribe" class="btn btn-twitch"><img
+              src="./images/icons/twitch-brands.svg" alt=""> Tilaa Twitchissä</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="palvelimet" class="container">
+      <h1>Palvelimet</h1>
+      <div class="server-wrap">
+        <ul class="border-list">
+          <li class="list-image"><img src="./images/minecraft-java-edition-logo.png" alt=""></li>
+          <li class="list-title">
+            <h3>Julkinen palvelin</h3>
+          </li>
+          <li>Peliversio: <span id="publicMinecraftVersion"></span></li>
+          <li>Pelaajia: <span id="publicMinecraftPlayers"></span></li>
+          <li>IP: wae.fi</li>
+          <li class="list-button"><a href="/minecraft" class="btn btn-block">Ohjeet ja säännöt</a></li>
+        </ul>
+        <ul class="border-list">
+          <li class="list-image"><img src="./images/minecraft-java-edition-logo.png" alt=""></li>
+          <li class="list-title">
+            <h3>Holistipalvelin</h3>
+          </li>
+          <li>Peliversio: <span id="holistiMinecraftVersion"></span></li>
+          <li>Pelaajia: <span id="holistiMinecraftPlayers"></span></li>
+          <li>IP: wae.fi:25566</li>
+          <li class="list-button"><a href="/minecraft" class="btn btn-block">Lisätietoa holisteille</a></li>
+        </ul>
+        <ul class="border-list">
+          <li class="list-image"><img src="./images/minecraft-java-edition-logo.png" alt=""></li>
+          <li class="list-title">
+            <h3>Holisti snapshot</h3>
+          </li>
+          <li>Peliversio: <span id="snapshotMinecraftVersion"></span></li>
+          <li>Pelaajia: <span id="snapshotMinecraftPlayers"></span></li>
+          <li>IP: wae.fi:25567</li>
+          <li class="list-button"><a href="/minecraft" class="btn btn-block">Lisätietoa holisteille</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="discord" class="bg-darker">
+    <div class="container text-left">
+      <img class="discord-logo" src="./images/Discord-Logo+Wordmark-White.svg" alt="Discord-Logo">
+      <p>Tervetuloa tänne matalaan majaamme ottamaan yliannostus kaikkea siistiä ja jännää! We Accidentally Everything
+        on videopeli-, sisällöntuotanto-, ja/tai nörttiyhteisö just sulle (lue: just sinä lukija), jos tykkäät
+        rankasta geimistä ja dänkeistä meemeistä! Tuu mukaan toimintaan liittymällä jäseneksi meidän Discordiin!
+        Kannattaa hypätä matalalla kynnyksellä juttuun mukaan - sitä ei ikinä tiedäkään mitä päädyt tekemään
+        kolmelta aamuyöstä äänikannuilla... Kyl sä tiiät miten tää menee - discord piste geegee kautta wae!
+      </p>
+      <p>Psst, muista lukasta säännöt ennen postailua - ne ei oo pitkät!</p>
+      <a href="https://discord.gg/wae" class="btn btn-discord">
+        Liity Discordiin
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div id="jasenet" class="container">
+      <h1>Jäsenet</h1>
+      <div class="member-wrapper">
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/156813228200951808.webp" type="image/webp" />
+            <img src="./images/avatars/156813228200951808.jpg">
+          </picture>
+          <div class="name-overlay">Emmi</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95869431216881664.webp" type="image/webp" />
+            <img src="./images/avatars/95869431216881664.jpg">
+          </picture>
+          <div class="name-overlay">J0P</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/277030763956928513.webp" type="image/webp" />
+            <img src="./images/avatars/277030763956928513.jpg">
+          </picture>
+          <div class="name-overlay">Joona</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95899798749605888.webp" type="image/webp" />
+            <img src="./images/avatars/95899798749605888.jpg">
+          </picture>
+          <div class="name-overlay">Nipde</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/66160710886891520.webp" type="image/webp" />
+            <img src="./images/avatars/66160710886891520.jpg">
+          </picture>
+          <div class="name-overlay">Worreh</div>
+        </a>
+      </div>
+
+      <div class="member-wrapper">
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/103145499355279360.webp" type="image/webp" />
+            <img src="./images/avatars/103145499355279360.jpg">
+          </picture>
+          <div class="name-overlay">Fabian Adrian</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95886487882567680.webp" type="image/webp" />
+            <img src="./images/avatars/95886487882567680.jpg">
+          </picture>
+          <div class="name-overlay">J3-RMU</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/107863790116163584.webp" type="image/webp" />
+            <img src="./images/avatars/107863790116163584.jpg">
+          </picture>
+          <div class="name-overlay">Jipsu97</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/99874548991672320.webp" type="image/webp" />
+            <img src="./images/avatars/99874548991672320.jpg">
+          </picture>
+          <div class="name-overlay">Juizzi</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/123833370453999618.webp" type="image/webp" />
+            <img src="./images/avatars/123833370453999618.jpg">
+          </picture>
+          <div class="name-overlay">Jusqu</div>
+        </a>
+      </div>
+
+      <div class="member-wrapper">
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/127054119620837376.webp" type="image/webp" />
+            <img src="./images/avatars/127054119620837376.jpg">
+          </picture>
+          <div class="name-overlay">Corrosive</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/108566726907547648.webp" type="image/webp" />
+            <img src="./images/avatars/108566726907547648.jpg">
+          </picture>
+          <div class="name-overlay">Donttu</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95900985074925568.webp" type="image/webp" />
+            <img src="./images/avatars/95900985074925568.jpg">
+          </picture>
+          <div class="name-overlay">NooruliTheSylveon</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95885616889204736.webp" type="image/webp" />
+            <img src="./images/avatars/95885616889204736.jpg">
+          </picture>
+          <div class="name-overlay">Peku</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/142663984355475456.webp" type="image/webp" />
+            <img src="./images/avatars/142663984355475456.jpg">
+          </picture>
+          <div class="name-overlay">PiiNi524</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/95899753136537600.webp" type="image/webp" />
+            <img src="./images/avatars/95899753136537600.jpg">
+          </picture>
+          <div class="name-overlay">Retroritari</div>
+        </a>
+        <a href="" class="member-item">
+          <picture>
+            <source srcset="./images/avatars/102817486545641472.webp" type="image/webp" />
+            <img src="./images/avatars/102817486545641472.jpg">
+          </picture>
+          <div class="name-overlay">Zippa</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer" class="bg-darker text-gray">
+    <div class="container">
+      <p><a class="link-primary" href="mailto:contact@wae.fi">contact@wae.fi</a> - <a class="link-primary"
+          href="mailto:fabian@wae.fi">fabian@wae.fi</a></p>
+      <p>Copyright &copy 2021 — Fabian Adrian | Icons provided by <a class="link-primary"
+          href="https://fontawesome.com/license">FontAwesome</a></p>
+    </div>
+  </section>
+
+  <!-- <div class="section members">
+    <h1>Jäsenet</h1>
+    <p class="lead">Alta löydät kaikki peliporukkamme jäsenet, jotka vastaavat myös yhteisön ylläpitämisestä!</p>
+    <div class="member-category">
+      <div class="line"></div>
+      <h2>Perustajat</h2>
+      <div class="line"></div>
+    </div>
+    <div class="member-category">
+      <div class="line"></div>
+      <h2>Jokapaikan sankarit</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="member-wrapper">
+      <div class="member-item">
+        <a class="member-link" target="_blank" href="https://www.instagram.com/fabianadrian_ig/">
+          <img class="member-icon" src="img/members/fabian.jpg">
+        </a>
+        <h3><a class="fab-special" href="https://www.youtube.com/watch?v=rJfwHQteIeo" target="_blank">F</a>abian</h3>
+        <a class="email" href="mailto:fabian@wae.fi">fabian@wae.fi</a>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/j3rmu.jpg">
+          <p class="member-holisti">Alkoholisti</p>
+        </a>
+        <h3>J3-RMU</h3>
+        <a class="email" href="mailto:j3rmu@wae.fi">j3rmu@wae.fi</a>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/jipsu.jpg">
+        </a>
+        <h3>Jipsu97</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/juizzi.jpg">
+          <p class="member-holisti">Conkeholisti</p>
+        </a>
+        <h3>Juizzi</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/jusqu.jpg">
+        </a>
+        <h3>Jusqu</h3>
+        <a class="email" href="mailto:jusqu@wae.fi">jusqu@wae.fi</a>
+      </div>
+    </div>
+
+    <div class="member-category">
+      <div class="line"></div>
+      <h2>Ne muut, ne puut</h2>
+      <div class="line"></div>
+    </div>
+    <div class="member-wrapper">
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/corro.jpg">
+        </a>
+        <h3>Corrosive</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/donttu.jpg">
+        </a>
+        <h3>Donttu</h3>
+        <a class="email" href="mailto:donttu@wae.fi">donttu@wae.fi</a>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/nooruli.jpg">
+        </a>
+        <h3>Nooruli</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/peku.jpg">
+        </a>
+        <h3>Peku</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/piia.jpg">
+        </a>
+        <h3>PiiNi524</h3>
+        <a class="email" href="mailto:piini@wae.fi">piini@wae.fi</a>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/retro.jpg">
+        </a>
+        <h3>Retroritari</h3>
+      </div>
+      <div class="member-item">
+        <a class="member-link" href="#">
+          <img class="member-icon" src="img/members/zippa.jpg">
+        </a>
+        <h3>Zippa</h3>
+      </div>
+    </div>
+  </div> -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Russo+One&display=swap"
+    rel="stylesheet">
+
+
+
+  <script src="./js/header.js"></script>
+  <script src="https://mcapi.us/scripts/minecraft.js"></script>
+  <script src="./js/server-query.js"></script>
+  <script src="./js/discord-widget.js"></script>
+</body>
+
+</html>

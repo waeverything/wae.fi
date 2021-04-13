@@ -1,0 +1,27 @@
+{
+  "name": "wae.fi",
+  "version": "1.0.0",
+  "description": "# Development For development you will need to have [Node](\"https://github.com/nodejs/node\") and [Yarn](\"https://yarnpkg.com/\") installed.",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html ./src/minecraft/index.html",
+    "build2": "parcel build ./src/index.html",
+    "fetch-pfp": "node ./dev-scripts/fetch-pfp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waeverything/wae.fi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waeverything/wae.fi/issues"
+  },
+  "homepage": "https://github.com/waeverything/wae.fi#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "discord.js": "^12.5.3",
+    "parcel": "^2.0.0-beta.2"
+  }
+}

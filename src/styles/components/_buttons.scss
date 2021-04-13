@@ -1,0 +1,56 @@
+@use '../abstracts' as *;
+
+.btn {
+    align-items: center;
+    backface-visibility: hidden;
+    background: $clr-primary;
+    border: $border;
+    box-shadow: $box-shadow;
+    color: $clr-white;
+    display: inline-flex;
+    font-weight: bold;
+    height: 3rem;
+    justify-content: center;
+    padding: 0 .5rem;
+    position: relative;
+    text-align: center;
+    margin: .5rem 0;
+    box-sizing: border-box;
+
+    &::after {
+        content: "";
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 0%;
+        background-color: rgba(255, 255, 255, .35);
+        transition: all .35s;
+        position: absolute;
+    }
+
+    &:hover::after {
+        height: 100%;
+    }
+
+    img {
+        height: 2rem;
+        padding-right: .5rem; 
+    }
+}
+
+.btn-block {
+    display: flex; 
+    flex-grow: 1;
+}
+
+.btn-yt {
+    background: #ff0000;
+}
+
+.btn-twitch {
+    background: #9147ff;
+}
+
+.btn-discord {
+    background: #7289DA;
+}

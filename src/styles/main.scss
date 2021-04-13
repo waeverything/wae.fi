@@ -1,0 +1,19 @@
+@use 'abstracts' as *;
+@use 'components';
+@use 'layout';
+
+body {
+    background: $clr-darkest;
+    color: $clr-white;
+    text-align: center;
+}
+
+#palvelimet {
+    .server-wrap {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 20rem));
+        padding: 1rem 0;
+        justify-content: center;
+    }
+}
