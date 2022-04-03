@@ -1,0 +1,15 @@
+---
+import Icon from '../icon.astro';
+
+export interface Props {
+  id: string;
+  classes?: string;
+}
+
+const { id, classes } = Astro.props as Props;
+---
+
+<input id={id} class="hidden" type="checkbox">
+<label class={"hover:bg-accent rounded-sm " + classes} for={id}>
+  <Icon style="solid" icon="bars" />
+</label>

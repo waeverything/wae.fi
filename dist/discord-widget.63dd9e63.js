@@ -1,2 +1,0 @@
-!function(){var e=document.getElementById("widgetObject"),t=document.getElementById("memberCount");function n(){fetch("https://discordapp.com/api/guilds/95873997861834752/widget.json").then((function(e){return e.json()})).then((function(n){t.getElementsByTagName("span")[0].innerHTML=n.presence_count,e.classList.add("show"),setTimeout((function(){e.classList.remove("show")}),7e3)})).catch((function(e){throw e}))}setTimeout((function(){n(),setInterval(n,8e4)}),3e3)}();
-//# sourceMappingURL=discord-widget.63dd9e63.js.map
