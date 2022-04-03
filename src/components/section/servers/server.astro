@@ -1,0 +1,27 @@
+---
+import Image from 'astro-imagetools';
+
+export interface Props {
+  imageName: string;
+  name: string;
+  description: string;
+  ip: string;
+}
+
+const { imageName, name, description, ip } = Astro.props as Props;
+---
+<div class="bg-gray-800 rounded-sm overflow-hidden sm:basis-80 mb-auto shadow-md">
+  <Image
+    src={"/src/images/server/" + imageName}
+    alt=""
+  />
+  <!-- Card body -->
+  <div class="px-4 py-8">
+    <h3 class="text-2xl mb-2">{name}</h3>
+    <p class="text-gray-400">{description}</p>
+  </div>
+  <div class="bg-gray-700 flex">
+    <div class="bg-gray-600 p-4 whitespace-nowrap rounded-r-sm">IP-osoite</div>
+    <div class="p-4 text-center w-full">{ip}</div>
+  </div>
+</div>

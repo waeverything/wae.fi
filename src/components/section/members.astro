@@ -1,0 +1,27 @@
+---
+import Container from '../container.astro';
+import Image from 'astro-imagetools';
+
+import membersJSON from '../../members.json';
+---
+
+<section id="members" class="px-4 py-16">
+  <Container>
+    <h1 class="section-header">Jäsenet</h1>
+    <div class="grid grid-cols-members gap-4">
+      {membersJSON.groups.map(group => (
+        group.members.map(member => (
+          <div class="relative shadow-md rounded-sm overflow-hidden">
+            <Image
+              src={"/src/images/avatars/" + member.id + ".webp"}
+              alt=""
+            />
+            <div class="absolute bg-accent top-0 w-full h-full flex items-center justify-center hover:opacity-100 text-lg p-4 break-all opacity-0 transition-opacity hover:transition-none">
+              {member.name}
+            </div>
+          </div>
+        ))
+      ))}
+    </div>
+  </Container>
+</section>

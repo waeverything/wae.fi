@@ -1,0 +1,65 @@
+---
+import Hamburger from './hamburger.astro';
+import Icon from '../icon.astro';
+import Container from '../container.astro';
+
+const links = [
+  { title: 'holistit', url: '#holisti' },
+  { title: 'palvelimet', url: '#servers' },
+  { title: 'discord', url: '#discord' }
+]
+
+const socialLinks = [
+  {
+    url: "https://youtube.com/WAEverything",
+    icon: "youtube"
+  },
+  {
+    url: "https://www.twitch.tv/waeverything/",
+    icon: "twitch"
+  },
+  {
+    url: "https://twitter.com/WAEverything",
+    icon: "twitter"
+  },
+  {
+    url: "https://steamcommunity.com/groups/WAEverything",
+    icon: "steam"
+  }
+];
+---
+<div class="navbar bg-gray-800 top-0 sticky drop-shadow-lg z-10">
+  <Container classes="flex">
+    <Hamburger id="navbar-toggle" classes="md:hidden" />
+
+    <!-- Logo -->
+    <img class="h-16 p-4 hidden md:block" src="./images/wae-logo.svg" alt="WAEverything logo.">
+
+    <!-- Desktop navigation -->
+    <nav class="hidden md:flex">
+      {links.map(link => (
+        <a href={link.url} class="h-16 inline-flex items-center p-4 hover:bg-accent capitalize rounded-sm">
+          {link.title}
+        </a>
+      ))}
+    </nav>
+
+    <!-- Social links -->
+    <div class="flex ml-auto">
+      {socialLinks.map(link => (
+        <a href={link.url} class="hover:bg-accent rounded-sm">
+          <Icon style="brands" icon={link.icon} />
+        </a>
+      ))}
+    </div>
+
+    <!-- Mobile navigation -->
+    <nav id="navbar-mobile-links" class="flex flex-wrap opacity-0 pointer-events-none absolute top-full bg-gray-800 w-full md:hidden transition-opacity">
+      {links.map(link => (
+        <a href={link.url} class="p-4 hover:bg-accent basis-full capitalize rounded-sm">
+          {link.title}
+        </a>
+      ))}       
+    </nav>
+  </Container>
+</div>

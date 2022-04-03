@@ -1,20 +1,12 @@
-# WAEverything Website
+# wae.fi
+We Accidentally Everything website built with [Astro](https://astro.build).
 
-# Development
-For development you will need to have [Node]("https://github.com/nodejs/node") installed.
+## 🧞 Commands
 
-Clone the repository `https://github.com/waeverything/wae.fi.git`
+All commands are run from the root of the project, from a terminal:
 
-Install dependencies using
-> `npm install`
-
-You can then start the dev environment using
-> `npm run start`
-
-<br>
-
-## Build
-You can build the website using
-> `npm run build`
-
-<br>
+| Command         | Action                                      |
+|:----------------|:--------------------------------------------|
+| `npm install`   | Installs dependencies                       |
+| `npm run dev`   | Starts local dev server at `localhost:3000` |
+| `npm run build` | Build your production site to `./dist/`     |
