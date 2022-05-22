@@ -1,6 +1,6 @@
 ---
-import Image from 'astro-imagetools';
-import Icon from '../../icon.astro';
+import { Picture } from "astro-imagetools/components";
+import Icon from "../../icon.astro";
 
 export interface Props {
   name: string;
@@ -16,7 +16,7 @@ const { name, role, imageName, links} = Astro.props as Props;
 ---
 
 <div class="creator bg-gray-800 flex gap-4 pr-4 drop-shadow-md border-l-4 border-accent rounded-sm">
-  <Image
+   <Picture
     src={"/src/images/avatars/" + imageName}
     alt=""
    />

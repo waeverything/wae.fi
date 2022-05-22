@@ -1,4 +1,6 @@
 ---
+import { ImageSupportDetection } from 'astro-imagetools/components'
+
 import Banner from '../components/banner.astro';
 import Navbar from '../components/navbar/navbar.astro';
 
@@ -32,6 +34,8 @@ import Styles from '../styles/global.css';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet"> 
+
+    <ImageSupportDetection />
 	</head>
 
 	<body>

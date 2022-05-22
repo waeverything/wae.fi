@@ -2,6 +2,8 @@
 import Container from '../../container.astro';
 import Creator from './creator.astro';
 
+import { BackgroundImage } from 'astro-imagetools/components';
+
 const creators = [
   {
     name: "J0P",
@@ -46,7 +48,17 @@ const creators = [
   },
 ];
 ---
-<section id="holisti" class="px-4 py-16">
+<BackgroundImage
+  src="/src/images/section-backgrounds/holisti.png"
+  backgroundSize="cover"
+  backgroundPosition="top left"
+  attributes={{
+    container: {
+      class: "px-4 py-16",
+      id: "holisti"
+    }
+  }}
+>
   <Container classes="col-2 sm:flex-row-reverse flex flex-col sm:flex-row gap-8">
     <!-- Text content -->
     <div class="flex justify-center text-center flex-col bg-gray-800 p-8 rounded-sm my-auto shadow-md border-accent border-b-4">
@@ -67,10 +79,4 @@ const creators = [
       ))}
     </div>
   </Container>
-</section>
-
-<style>
-  section {
-    background: url('/images/backgrounds/section/holisti.jpg') top left / cover;
-  }
-</style>
+</BackgroundImage>

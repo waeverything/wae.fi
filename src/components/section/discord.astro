@@ -1,8 +1,20 @@
 ---
 import Container from '../container.astro';
+
+import { BackgroundImage } from 'astro-imagetools/components';
 ---
 
-<section id="discord" class="px-4 py-16">
+<BackgroundImage
+  src="/src/images/section-backgrounds/discord.png"
+  backgroundSize="cover"
+  backgroundPosition="center"
+  attributes={{
+    container: {
+      class: "px-4 py-16",
+      id: "discord"
+    }
+  }}
+>
   <Container classes="flex flex-col md:flex-row gap-8">
     <div class="flex flex-col justify-center bg-gray-800 p-8 rounded-sm my-auto shadow-md border-accent border-b-4">
       <h1 class="section-header">Discord</h1>
@@ -14,10 +26,4 @@ import Container from '../container.astro';
 
     <iframe class="h-96 shadow-md" src="https://discord.com/widget?id=95873997861834752&theme=dark" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   </Container>
-</section>
-
-<style lang="scss">
-  section {
-    background: url('/images/backgrounds/section/discord.jpg') center / cover;
-  }
-</style>
+</BackgroundImage>

@@ -1,8 +1,8 @@
 ---
-import Container from '../container.astro';
-import Image from 'astro-imagetools';
+import Container from "../container.astro";
+import { Picture } from "astro-imagetools/components";
 
-import membersJSON from '../../members.json';
+import membersJSON from "../../members.json";
 ---
 
 <section id="members" class="px-4 py-16">
@@ -12,11 +12,11 @@ import membersJSON from '../../members.json';
       {membersJSON.groups.map(group => (
         group.members.map(member => (
           <div class="relative shadow-md rounded-sm overflow-hidden">
-            <Image
+            <Picture
               src={"/src/images/avatars/" + member.id + ".webp"}
               alt=""
             />
-            <div class="absolute bg-accent top-0 w-full h-full flex items-center justify-center hover:opacity-100 text-lg p-4 break-all opacity-0 transition-opacity hover:transition-none">
+            <div class="absolute bg-accent top-0 w-full h-full flex items-center justify-center hover:opacity-100 text-lg p-4 break-all z-10 transition-opacity hover:transition-none opacity-0">
               {member.name}
             </div>
           </div>

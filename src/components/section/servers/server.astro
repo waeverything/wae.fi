@@ -1,5 +1,5 @@
 ---
-import Image from 'astro-imagetools';
+import { Picture } from "astro-imagetools/components";
 
 export interface Props {
   imageName: string;
@@ -11,7 +11,7 @@ export interface Props {
 const { imageName, name, description, ip } = Astro.props as Props;
 ---
 <div class="bg-gray-800 rounded-sm overflow-hidden sm:basis-80 mb-auto shadow-md">
-  <Image
+  <Picture
     src={"/src/images/server/" + imageName}
     alt=""
   />
