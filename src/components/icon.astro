@@ -8,5 +8,5 @@ const { style = "solid", icon } = Astro.props as Props;
 ---
 
 <div class="h-16 w-16 flex items-center justify-center text-2xl">
-  <i class={'fa-' + style + ' fa-' + icon}></i>
+  <span class="iconify-inline" data-icon={`fa6-${style}:${icon}`}></span>
 </div>
