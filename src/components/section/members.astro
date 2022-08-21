@@ -3,24 +3,27 @@ import Container from "../container.astro";
 import { Picture } from "astro-imagetools/components";
 
 import membersJSON from "../../members.json";
+const groups = membersJSON.groups;
 ---
 
 <section id="members" class="px-4 py-16">
   <Container>
     <h1 class="section-header">Jäsenet</h1>
     <div class="grid grid-cols-members gap-4">
-      {membersJSON.groups.map(group => (
-        group.members.map(member => (
-          <div class="relative shadow-md rounded-sm overflow-hidden">
-            <Picture
-              src={"/src/images/avatars/" + member.id + ".webp"}
-              alt=""
-            />
-            <div class="absolute bg-accent top-0 w-full h-full flex items-center justify-center hover:opacity-100 text-lg p-4 break-all z-10 transition-opacity hover:transition-none opacity-0">
-              {member.name}
+      {groups.map(group => (
+        <>
+          {group.members.map(member => (
+            <div class="relative shadow-md rounded-sm overflow-hidden">
+              <Picture
+                src={"/src/images/avatars/" + member.id + ".webp"}
+                alt=""
+              />
+              <div class="absolute bg-accent top-0 w-full h-full flex items-center justify-center hover:opacity-100 text-lg p-4 break-all z-10 transition-opacity hover:transition-none opacity-0">
+                {member.name}
+              </div>
             </div>
-          </div>
-        ))
+          ))}
+        </>
       ))}
     </div>
   </Container>
