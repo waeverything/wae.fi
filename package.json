@@ -6,7 +6,7 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^1.0.1",
+    "@astrojs/tailwind": "^2.0.2",
     "astro": "^1.2.3",
     "sass": "^1.54.9",
     "tailwindcss": "^3.1.8"
