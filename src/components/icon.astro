@@ -1,4 +1,6 @@
 ---
+import Icon from "astro-icon";
+
 export interface Props {
   style?: string;
   icon: string;
@@ -7,6 +9,6 @@ export interface Props {
 const { style = "solid", icon } = Astro.props as Props;
 ---
 
-<div class="h-16 w-16 flex items-center justify-center text-2xl">
-  <span class="iconify-inline" data-icon={`fa6-${style}:${icon}`}></span>
+<div class="h-16 w-16 p-4 flex items-center justify-center">
+  <Icon pack={`fa-${style}`} name={icon} />
 </div>
