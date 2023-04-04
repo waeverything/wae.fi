@@ -1,18 +1,21 @@
 {
   "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "astro dev --experimental-integrations",
-    "build": "astro build --experimental-integrations",
-    "preview": "astro preview"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/tailwind": "^2.1.3",
-    "astro": "^1.6.14",
-    "sass": "^1.56.2",
-    "tailwindcss": "^3.2.4"
+    "@astrojs/tailwind": "^3.1.1",
+    "astro": "^2.1.9",
+    "sass": "^1.60.0",
+    "tailwindcss": "^3.3.1"
   },
   "dependencies": {
     "astro-icon": "^0.8.0",
-    "astro-imagetools": "^0.6.16"
+    "astro-imagetools": "^0.8.1"
   }
 }
