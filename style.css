@@ -1,6 +1,8 @@
 :root {
+    --color-accent: #04c2ff;
+
     color-scheme: dark light;
-    accent-color: #04c2ff;
+    accent-color: var(--color-accent);
 }
 
 body {
@@ -10,21 +12,20 @@ body {
     padding-inline: 1rem;
 }
 
-article {
-    margin-block: 5rem;
+img {
+    max-width: 100%;
+}
 
-    & img {
-        max-height: 24rem;
-    }
+article, footer {
+    margin-block: 5rem;
+}
+
+article img {
+    max-height: 24rem;
 }
 
 footer {
     text-align: center;
-    padding-block: 5rem;
-}
-
-img {
-    max-width: 100%;
 }
 
 .social-links {
