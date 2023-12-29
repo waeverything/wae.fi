@@ -1,5 +1,6 @@
 :root {
     color-scheme: dark light;
+    accent-color: #04c2ff;
 }
 
 body {
@@ -7,6 +8,14 @@ body {
     max-width: 96rem;
     margin-inline: auto;
     padding-inline: 1rem;
+}
+
+article {
+    margin-block: 5rem;
+
+    & img {
+        max-height: 24rem;
+    }
 }
 
 footer {
