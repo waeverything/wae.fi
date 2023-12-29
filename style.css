@@ -20,8 +20,15 @@ article {
 
 footer {
     text-align: center;
+    padding-block: 5rem;
 }
 
 img {
     max-width: 100%;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
 }
