@@ -5,6 +5,10 @@
     accent-color: var(--color-accent);
 }
 
+html {
+    position: relative;
+}
+
 body {
     font-family: sans-serif;
     max-width: 96rem;
@@ -33,4 +37,11 @@ footer {
     justify-content: center;
     gap: 1em;
     flex-wrap: wrap;
+}
+
+.dickbutt {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 8rem;
 }
